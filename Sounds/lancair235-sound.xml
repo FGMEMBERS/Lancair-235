@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<!-- 26-08-2008 
+     30-08-2008 Updated by AJ -->
+
+<PropertyList>
+
+  <fx>
+
+    <crank>
+      <name>engstart</name>
+      <path>Aircraft/Lancair-235/Sounds/dr400-starter.wav</path>
+      <property>engines/engine/cranking</property>
+      <volume>
+        <offset>-0.6</offset>
+      </volume>
+    </crank>
+    <crank>
+      <name>crank</name>
+      <mode>looped</mode>
+      <path>Sounds/cranking.wav</path>
+      <condition>
+        <property>engines/engine/cranking</property>
+        <not>
+          <property>engines/engine/running</property>
+        </not>
+      </condition>
+      <volume>
+        <offset>0.9</offset>
+      </volume>
+    </crank>
+    <crank>
+      <name>cough</name>
+      <path>Sounds/coughing.wav</path>
+      <property>engines/engine/running</property>
+      <volume>
+        <offset>0.2</offset>
+      </volume>
+    </crank>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lancair-235/Sounds/dr400-engine.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <or>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+            <not>
+              <property>sim/current-view/internal</property>
+            </not>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+    </engine>
+
+    <engine-internal>
+      <name>engine-internal</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lancair-235/Sounds/dr400-engine-internal.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine/rpm</property>
+            <value>60</value>
+          </greater-than>
+          <not>
+            <greater-than>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </greater-than>
+          </not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0005</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.15</offset>
+      </pitch>
+      <reference-dist>4.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </engine-internal>
+
+    <propeller>
+      <name>propeller</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lancair-235/Sounds/dr400-prop.wav</path>
+      <condition>
+        <greater-than>
+          <property>engines/engine/rpm</property>
+          <value>60</value>
+        </greater-than>
+        <not>
+          <and>
+            <equals>
+              <property>instrumentation/doors/crew/position-norm</property>
+              <value>0</value>
+            </equals>
+            <property>sim/current-view/internal</property>
+          </and>
+        </not>
+      </condition>
+      <pitch>
+        <property>/engines/engine/mp-osi</property>
+        <factor>0.0036</factor>
+        <min>0.5</min>
+        <max>2.0</max>
+        <offset>0.9</offset>
+      </pitch>
+    </propeller>
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <and>
+          <or>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+          </or>
+          <or>
+            <greater-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+            <greater-than>
+              <property>gear/gear[1]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+            <greater-than>
+              <property>gear/gear[2]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.5</factor>
+        <max>2.5</max>
+      </volume>
+    </rumble>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <max>0.2</max>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+    </squeal>
+
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>surface-positions/flap-pos-norm</property>
+      <volume>
+        <factor>0.2</factor>
+      </volume>
+      <reference-dist>10.0</reference-dist>
+      <max-dist>20.0</max-dist>
+    </flap>
+
+    <stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lancair-235/Sounds/dr400-stall.wav</path>
+      <condition>
+        <and>
+          <property>controls/electric/battery-switch</property>
+          <less-than>
+            <property>velocities/airspeed-kt</property>
+            <value>46</value>
+          </less-than>
+          <not>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+          </not>
+        </and>
+      </condition>
+      <reference-dist>4.0</reference-dist>
+      <max-dist>10.0</max-dist>
+    </stall>
+
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lancair-235/Sounds/dr400-wind.wav</path>
+      <property>velocities/airspeed-kt</property>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+        <max>1.5</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+      </pitch>
+    </wind>
+
+    <!--                  Toggle Switches                  -->
+    <click>
+      <name>Battery on</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Battery off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/electric/battery-switch</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Fuel Pump on</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/engines/engine/fuel-pump</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Fuel Pump off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/fuel-pump</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Nav Light On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/nav-lights</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Nav Light Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/nav-lights</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Landing Light On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/landing-light</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Landing Light Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/landing-light</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Turn and Bank On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>instrumentation/turn-indicator/serviceable</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Turn and Bank Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>instrumentation/turn-indicator/serviceable</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Flashing Beacon On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/flashing-beacon</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Flashing Beacon Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/flashing-beacon</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Pitot Heat On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/anti-ice/pitot-heat</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Pitot Heat Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/anti-ice/pitot-heat</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Magnetos-R</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+    <click>
+      <name>Magnetos-L</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+    <click>
+      <name>Magnetos-B</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+    <click>
+      <name>Strobe Lights On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/strobe-lights</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Strobe Lights Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/strobe-lights</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Avionics Master On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/master-avionics</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Avionics Master Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/master-avionics</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <squish>
+      <name>Primer Out</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <property>controls/engines/engine/primer-pump</property>
+      </condition>
+      <volume>
+        <factor>0.1</factor>
+      </volume>
+    </squish>
+
+    <squish>
+      <name>Primer In</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/primer-pump</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>0.1</factor>
+      </volume>
+    </squish>
+
+  </fx>
+
+</PropertyList>

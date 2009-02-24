@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Lancair-235/lancair235-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Lancair-235/Sounds/lancair235-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Lancair-235/Models/lancair235.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.25</setting> <!-- 15 deg -->
+      <setting>1.00</setting> <!-- 60 deg -->
+    </flaps>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Lancair235</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/lancair235-menu.xml"/>
+
+    <weight n="0">
+        <name>Pilot</name>
+        <weight-lb>200</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>100</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Copilot</name>
+        <weight-lb>200</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+        <name>Pax</name>
+        <weight-lb>0</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="3">
+        <name>Cargo</name>
+        <weight-lb>0</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+</sim>
+ 
+  <input>
+    <keyboard include="Nasal/lancair235-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <lancair235>
+      <file>Aircraft/Lancair-235/Nasal/doors.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/light.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/liveries.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/immat.nas</file>
+    </lancair235>
+  </nasal>
+   
+</PropertyList>
