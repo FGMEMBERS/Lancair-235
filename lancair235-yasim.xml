@@ -15,8 +15,9 @@
 
   <!-- Approach configuration -->
   <approach speed="58" aoa="8" fuel="0.3">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>  <!--0.2-->
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/gear/gear-down" value="1.0"/>
   </approach>
@@ -25,6 +26,7 @@
   <cruise speed="165" alt="5000" fuel="1.0">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
     <control-setting axis="/controls/gear/gear-down" value="0.0"/>
   </cruise>
@@ -38,7 +40,7 @@
         length="3.155" 
         taper="0.58" 
         dihedral="2"
-        camber="0.04"
+        camber="0.042"
         incidence="1"
         twist="0"
         sweep="0"> 
@@ -85,11 +87,20 @@
        <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-  <!--  Lycoming IO-320-L2A  -->
+  <!--  Lycoming IO-320-L2A
+                 weight       : 252 lb (114 kg)
+                 Displacement : 233.3 in3
+                 Compression  : 8.5:1
+
+
+                                          Rayon * Rayon * Mass(kg)   0.739 * 0.739 * 114
+                 moment d'après la doc : ________________________ = ____________________ = 20.75
+                                                     3                         3
+  -->
   <propeller x="2.224" y="0.0" z="0.009" 
              mass="252" 
-             moment="6"
-             radius="0.882"
+             radius="0.739"
+             moment="20.75"
              cruise-speed="150" 
              cruise-rpm="2700"
              cruise-alt="5000" 
@@ -102,10 +113,11 @@
                             displacement="233.3" 
                             compression="8.5"/>
              <actionpt x="2.915" y="0.0" z="0.029" />
-             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" />
-             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
-             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
-             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" />
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   </propeller>
 
   <gear x="2.093" y="0" z="-0.907" 
@@ -138,22 +150,22 @@
   </gear>
 
   <!-- Fuel  -->
-  <tank x="0.72" y="0.0" z="-0.382" capacity="169" />
+  <tank x="0.72" y="1.323" z="-0.272" capacity="169" />
 
   <!-- Pilot -->
-  <weight x="1.4" y="0.30" z="0"
+  <weight x="0.534" y="0.231" z="-0.020"
         mass-prop="sim/weight[0]/weight-lb"/>
   <!-- Copilot -->
-  <weight x="1.4" y="-0.30" z="0"
+  <weight x="0.534" y="-0.231" z="-0.020"
         mass-prop="sim/weight[1]/weight-lb"/>
   <!-- Pax -->
-  <weight x="0.65" y="0.30" z="0"
+  <weight x="-0.065" y="0.00" z="-0.056"
         mass-prop="sim/weight[2]/weight-lb"/>
   <!-- Cargo -->
-  <weight x="-0.1" y="0.30" z="0"
+  <weight x="-0.0651" y="0.0" z="-0.056"
         mass-prop="sim/weight[3]/weight-lb"/>
 
   <!-- CG théorique : x=0.645 y=0 z=-0.276 -->
-  <ballast x="2.0" y="0.0" z="-1.0" mass="250"/>
+  <ballast x="1.5" y="0.0" z="-0.8" mass="250"/>
 
 </airplane>
