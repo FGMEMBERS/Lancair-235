@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -31,17 +31,21 @@
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>porteA</object-name>
+    <object-name>porteG0</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
+    <object-name>porteD0</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>axeA</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
     <object-name>echappes</object-name>
+    <object-name>tourvitres</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
+    <object-name>vitres2</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </animation>
@@ -51,11 +55,13 @@
     <shader>chrome</shader>
     <texture>glass_shader.png</texture>
     <object-name>vitres</object-name>
+    <object-name>vitres2</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
     <object-name>vitres</object-name>
+    <object-name>vitres2</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </animation>
@@ -78,14 +84,17 @@
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>porteA</object-name>
+    <object-name>porteG0</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
+    <object-name>porteD0</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>axeA</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
     <object-name>echappes</object-name>
+    <object-name>tourvitres</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -317,7 +326,7 @@
     <type>rotate</type>
     <object-name>voletG</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-60.0</factor>
+    <factor>-20.0</factor>
     <axis>
       <x1-m> -0.319 </x1-m>
       <y1-m> -0.574 </y1-m>
@@ -332,7 +341,7 @@
     <type>rotate</type>
     <object-name>voletD</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-60.0</factor>
+    <factor>-20.0</factor>
     <axis>
       <x1-m> -0.563 </x1-m>
       <y1-m>  2.577 </y1-m>
@@ -474,6 +483,24 @@
     </interpolation>
     <axis>
       <x1-m> -0.929 </x1-m>
+      <y1-m> -1.220 </y1-m>
+      <z1-m> -0.331 </z1-m>
+      <x2-m> -0.800 </x2-m>
+      <y2-m> -1.220 </y2-m>
+      <z2-m> -0.331 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteG0</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -87.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -0.929 </x1-m>
       <y1-m> -1.232 </y1-m>
       <z1-m> -0.331 </z1-m>
       <x2-m> -0.800 </x2-m>
@@ -530,6 +557,24 @@
   <animation>
     <type>rotate</type>
     <object-name>porteD1</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -87.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -0.800 </x1-m>
+      <y1-m>  1.220 </y1-m>
+      <z1-m> -0.331 </z1-m>
+      <x2-m> -0.929 </x2-m>
+      <y2-m>  1.220 </y2-m>
+      <z2-m> -0.331 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteD0</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
@@ -634,23 +679,28 @@
     </axis>
   </animation>
 
-  <!-- Canopy 
+  <!-- Canopy -->
+  <animation>
+    <name>CanopyTotale</name>
+    <object-name>roueD</object-name>
+    <object-name>axeD</object-name>
+  </animation>
+
   <animation>
     <type>translate</type>
-    <object-name>verriere</object-name>
-    <object-name>toitverriere</object-name>
-    <object-name>tourverriere</object-name>
+    <object-name>vitres</object-name>
+    <object-name>tourvitres</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep> 0.80 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> 0.60 </dep></entry>
     </interpolation>
     <axis>
       <x> -1.000 </x>
       <y>  0.000 </y>
       <z>  0.000 </z>
     </axis>
-  </animation> -->
+  </animation>
 
   <!-- Essais d'ajout des effets lumineux
   <model>

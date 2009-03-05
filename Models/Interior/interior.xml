@@ -11,11 +11,13 @@
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
+    <object-name>intvitres2</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
     <object-name>intvitres</object-name>
+    <object-name>intvitres2</object-name>
   </animation>
 
   <animation>
@@ -23,18 +25,19 @@
     <shader>chrome</shader>
     <texture>shader.png</texture>
     <object-name>intvitres</object-name>
+    <object-name>intvitres2</object-name>
   </animation>
 
-  <!-- Pilote
+  <!-- Pilote -->
   <model>
     <name>Pilote</name>
     <path>Aircraft/Lancair-235/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -1.474 </x-m>
-      <y-m> -0.251 </y-m>
-      <z-m> -0.029 </z-m>
+      <x-m> -0.844 </x-m>
+      <y-m> -0.207 </y-m>
+      <z-m> -0.213 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Tableau de bord -->
   <model>
@@ -47,7 +50,23 @@
       <pitch-deg>   0.000 </pitch-deg>
       <heading-deg> 0.000 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
+
+  <!-- Canopy -->
+  <animation>
+    <type>translate</type>
+    <object-name>intvitres</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> 0.60 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
 
   <!-- Les palonniers
   <model>

@@ -56,6 +56,7 @@
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
 
+        <control-speed control="FLAP1" transition-time="0.01"/>
         <control-speed control="FLAP0" transition-time="5"/>
   </wing>
 
