@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Lancair 235 - 2008 - Emmanuel BARANGER 
+<!-- Lancair 235 - 2008 - Emmanuel BARANGER 
+                   2010 - Emmanuel BARANGER with Melchior's script
 
-  Wingspan     : 7.16 m   (23.6 ft)
-  lenght       : 6.40 m   (19.8 ft)
-  height       : 2.15 m   ( 6.1 ft)
-  Empty mass   : 430 kg   (948 lb)
-  Engine       : Lycoming IO 320 (160 hp)
-  Cruise speed : 305 km/h (165 kts)
+     sources      : http://www.ehow.com/list_7372096_lancair-235-specifications.html
+
+     Wingspan     : 7.16 m   (23.6 ft)
+     lenght       : 6.40 m   (19.8 ft)
+     height       : 2.15 m   ( 6.1 ft)
+     Empty mass   : 430 kg   (948 lb)
+     Engine       : Lycoming IO 320 (160 hp)
+     Cruise speed : 305 km/h (165 kts)
 -->
 
 <airplane mass="948">
 
   <!-- Approach configuration -->
-  <approach speed="58" aoa="8" fuel="0.3">
+  <approach speed="50" aoa="7" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
@@ -33,18 +35,17 @@
 
   <cockpit x="0.557" y="0" z="0.327"/>
 
-  <fuselage ax="3.213" ay="0" az="0.054" bx="-2.821" by="0" bz="0.054" width="1.087" taper="0.4" midpoint="1"/>
+  <fuselage ax="2.840" ay="0" az="0.054" bx="-2.821" by="0" bz="0.054" width="1.087" taper="0.3" midpoint="0.4"/>
 
   <wing x="0.645" y="0.419" z="-0.276"
         chord="1.384" 
         length="3.155" 
         taper="0.58" 
         dihedral="2"
-        camber="0.042"
+        camber="0.01"
         incidence="1"
-        twist="0"
-        sweep="0"> 
-        <stall aoa="18" width="1.0" peak="1.5"/>
+        sweep="-4"> 
+        <stall aoa="18" width="1" peak="1.5"/>
         <flap0 start="0.05" end="0.68" lift="1.4" drag="1.5"/>
         <flap1 start="0.68" end="0.96" lift="1.2" drag="1.1"/>
 
@@ -65,9 +66,9 @@
          length="0.960" 
          taper="0.60"
          incidence="0" 
-         sweep="0">
-         <stall aoa="20" width="4" peak="1.5"/>
-         <flap0 start="0" end="1.636" lift="2.0" drag="1.1"/>
+         sweep="8">
+         <stall aoa="20" width="1" peak="1.5"/>
+         <flap0 start="0.1" end="1" lift="2.0" drag="1.1"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -76,16 +77,16 @@
   </hstab>
 
   <vstab x="-2.185" y="0" z="0.030"
-       chord="1.198"
-       length="1.065" 
-       taper="0.38"
-       sweep="35">
-       <stall aoa="18" width="3" peak="1.5"/>
-       <flap0 start="0" end="0.935" lift="1.6" drag="1.3"/>
+         chord="1.198"
+         length="1.15" 
+         taper="0.38"
+         sweep="40">
+         <stall aoa="18" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.6" drag="1.3"/>
 
-       <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
 
-       <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
   <!--  Lycoming IO-320-L2A
@@ -93,15 +94,11 @@
                  Displacement : 233.3 in3
                  Compression  : 8.5:1
 
-
-                                          Rayon * Rayon * Mass(kg)   0.739 * 0.739 * 114
-                 moment d'après la doc : ________________________ = ____________________ = 20.75
-                                                     3                         3
   -->
   <propeller x="2.224" y="0.0" z="0.009" 
              mass="252" 
              radius="0.739"
-             moment="20.75"
+             moment="3.74"
              cruise-speed="150" 
              cruise-rpm="2700"
              cruise-alt="5000" 
@@ -109,11 +106,10 @@
              takeoff-power="112" 
              takeoff-rpm="2575" >
              <piston-engine eng-rpm="2800" 
-                            alt="0000" 
                             eng-power="160" 
                             displacement="233.3" 
                             compression="8.5"/>
-             <actionpt x="2.915" y="0.0" z="0.029" />
+             <actionpt x="2.915" y="0.0" z="0.054" />
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -166,7 +162,7 @@
   <weight x="-0.0651" y="0.0" z="-0.056"
         mass-prop="sim/weight[3]/weight-lb"/>
 
-  <!-- CG théorique : x=0.645 y=0 z=-0.276 -->
-  <ballast x="1.5" y="0.0" z="-0.8" mass="250"/>
+  <!-- Mass distribution -->
+  <ballast x="1.3" y="0.0" z="-1" mass="300"/>
 
 </airplane>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -7,7 +7,7 @@
     <desc>Canopy</desc>
     <binding>
      <command>nasal</command>
-     <script>lancair235.doorsystem.crewexport();</script>
+     <script>doors.doorsystem.crewexport();</script>
     </binding>
    </key>
 

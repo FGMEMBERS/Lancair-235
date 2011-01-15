@@ -38,6 +38,8 @@
         <int type="int" n="3">0</int>
         <int type="int" n="4">0</int>
         <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -79,15 +81,17 @@
         <min-lb>0</min-lb>
     </weight>
 
-</sim>
+  </sim>
  
   <input>
     <keyboard include="Nasal/lancair235-keyboard.xml"/>
   </input>
  
   <nasal>
-    <lancair235>
+    <doors>
       <file>Aircraft/Lancair-235/Nasal/doors.nas</file>
+    </doors>
+    <lancair235>
       <file>Aircraft/Lancair-235/Nasal/light.nas</file>
       <file>Aircraft/Lancair-235/Nasal/liveries.nas</file>
       <file>Aircraft/Lancair-235/Nasal/immat.nas</file>
@@ -95,3 +99,4 @@
   </nasal>
    
 </PropertyList>
+
