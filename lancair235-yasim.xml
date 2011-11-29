@@ -106,7 +106,9 @@
              cruise-alt="5000"
              cruise-power="150"
              takeoff-power="112"
-             takeoff-rpm="2575" >
+             takeoff-rpm="2575"
+             min-rpm="600"
+             max-rpm="2700">
              <actionpt x="2.915" y="0.0" z="0.054" />
              <piston-engine eng-rpm="2800"
                             eng-power="160"
