@@ -41,15 +41,16 @@
     <type>texrotate</type>
     <object-name>HDGneedle</object-name>
     <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+    <center>
+      <x> 0.5 </x>
+      <y> 0.5 </y>
+    </center>
     <axis>
       <x>  0.0 </x>
       <y>  0.0 </y>
       <z> -1.0 </z>
     </axis>
-    <center>
-      <x> 0.5 </x>
-      <y> 0.5 </y>
-    </center>
   </animation>
 
 </PropertyList>
+

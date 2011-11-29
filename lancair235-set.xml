@@ -4,8 +4,17 @@
 <PropertyList include="lancair235-yasim-cnf.xml">
 
   <sim>
+
     <description>Lancair 235 (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>

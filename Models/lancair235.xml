@@ -168,6 +168,26 @@
     <object-name>propblur</object-name>
   </animation>
 
+  <!-- Immatriculatoin
+  <model>
+    <path>Aircraft/Lancair-235/Models/Immat/immat.xml</path>
+  </model> -->
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/shadow.xml</path>
+    <offsets>
+      <x-m> -0.01322 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.74400 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/interior.xml</path>
+  </model>
+
   <!-- Cranking effects -->
   <!-- Left -->
   <model>
@@ -223,38 +243,6 @@
       <y-m>  1.152 </y-m>
       <z-m> -0.907 </z-m>
     </offsets>
-  </model>
-
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0.0 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.0 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Immatriculatoin
-  <model>
-    <path>Aircraft/Lancair-235/Models/Immat/immat.xml</path>
-    <offsets>
-      <x-m> 0.0 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.0 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model> -->
-
-  <!-- Une ombre pour OSG -->
-  <model>
-    <name>shadowOSG</name>
-    <path>Aircraft/Lancair-235/Models/shadow.xml</path>
   </model>
 
   <!-- L'hélice --> 

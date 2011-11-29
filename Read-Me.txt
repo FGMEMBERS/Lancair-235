@@ -6,10 +6,8 @@ English/Français
 A little history
 ================
 
-Robin DR 400
-             120
-             180
-================
+Lancair 235
+===========
 
 Manufacturer                  :
 Type                          :
@@ -30,17 +28,10 @@ d : canopy
 Thanks
 ======
 
-Guillaume CHAUVAT for JSBSim FDM
-Laurent HAYVEL for texture
-Brisa for mixture on panel
-Laurent WROMMAN for new multi FDM
-
 ===============
 BARANGER Emmanuel
-May, 25, 2007.
-August, 11, 2008.
-December, 08, 2008.
-February, 11, 2009.
+Janury, 15 2011.
+November, 29, 2011.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -52,10 +43,8 @@ embaranger@free.fr
 Un peu d'histoire
 =================
 
-Robin DR 400
-             120
-             180
-================
+Lancaur 235
+===========
 
 Constructeur                  :
 Type                          :
@@ -77,17 +66,10 @@ d : cockpit
 Remerciements
 =============
 
-Guillaume CHAUVAT pour le FDM JSBSim
-Laurent HAYVEL pour la texture
-Brisa pour la mixture sur la tableau de bord
-Laurent WROMMAN pour les nouveaux FDM
-
 ===============
 BARANGER Emmanuel
-25 Mai 2007.
-11 Août 2008.
-08 Décembre 2008.
-11 Février 2009.
+15 Janvier 2011.
+29 Novembre 2011.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr

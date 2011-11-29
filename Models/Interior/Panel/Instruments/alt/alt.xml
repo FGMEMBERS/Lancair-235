@@ -101,87 +101,87 @@
       <entry><ind> 31.4 </ind><dep> 350.00 </dep></entry>
     </interpolation>
     <center>
-      <x>0.25</x>
-      <y>0.25</y>
+      <x> 0.25 </x>
+      <y> 0.25 </y>
     </center>
     <axis>
-      <x>0</x>
-      <y>0</y>
-      <z>-1</z>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
     </axis>
   </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>inhg.dn</object-name>
-        <visible>0</visible>
-        <action>
-            <button>0</button>
-            <repeatable>true</repeatable>
-            <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/altimeter/setting-inhg</property>
-            <step>-0.01</step>
-            <min>27.90</min>
-            <max>31.40</max>
-            <wrap>0</wrap>
-        </binding>
-        </action>
-    </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>inhg.dn</object-name>
+    <visible>0</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>-0.01</step>
+        <min>27.90</min>
+        <max>31.40</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>inhg.dn</object-name>
-        <visible>0</visible>
-        <action>
-            <button>1</button>
-            <repeatable>true</repeatable>
-            <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/altimeter/setting-inhg</property>
-            <step>-0.1</step>
-            <min>27.90</min>
-            <max>31.40</max>
-            <wrap>0</wrap>
-        </binding>
-        </action>
-    </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>inhg.dn</object-name>
+    <visible>0</visible>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>-0.1</step>
+        <min>27.90</min>
+        <max>31.40</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>inhg.up</object-name>
-        <visible>0</visible>
-        <action>
-            <button>0</button>
-            <repeatable>true</repeatable>
-            <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/altimeter/setting-inhg</property>
-            <step>0.01</step>
-            <min>27.90</min>
-            <max>31.40</max>
-            <wrap>0</wrap>
-        </binding>
-        </action>
-    </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>inhg.up</object-name>
+    <visible>0</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>0.01</step>
+        <min>27.90</min>
+        <max>31.40</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>inhg.up</object-name>
-        <visible>0</visible>
-        <action>
-            <button>1</button>
-            <repeatable>true</repeatable>
-            <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/altimeter/setting-inhg</property>
-            <step>0.1</step>
-            <min>27.90</min>
-            <max>31.40</max>
-            <wrap>0</wrap>
-        </binding>
-        </action>
-    </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>inhg.up</object-name>
+    <visible>0</visible>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>0.1</step>
+        <min>27.90</min>
+        <max>31.40</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
 
 </PropertyList>
 

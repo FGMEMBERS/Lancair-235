@@ -56,9 +56,9 @@
     <min-m>  -0.01575 </min-m>
     <max-m>   0.01575 </max-m>
     <axis>
-      <x> 0.0 </x>
-      <y> 0.0 </y>
-      <z> 1.0 </z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
@@ -145,9 +145,9 @@
     <property>/instrumentation/attitude-indicator/caged</property>
     <factor>0.005</factor>
     <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
