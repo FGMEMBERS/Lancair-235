@@ -5,10 +5,10 @@
   <sim>
 
     <description>Lancair 235 (YASim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <author>Emmanuel BARANGER (3D/FDM) / Philippe BROCORENS (Panel)</author>
     <flight-model archive="y">yasim</flight-model>
     <aero archive="y">lancair235-yasim</aero>
 
   </sim>
-
+  
 </PropertyList>

@@ -25,8 +25,8 @@
     </model>
 
     <flaps>
-      <setting>0.00</setting>
-      <setting>1.00</setting> <!-- 20 deg -->
+      <setting> 0 </setting>
+      <setting> 1 </setting> <!-- 20 deg -->
     </flaps>
 
     <multiplay>
@@ -38,7 +38,7 @@
         <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
         <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
         <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
-        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="bool" n="6"> 0 </int>                                      <!-- 6 smoke/bomb/torpedo -->
         <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
         <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
         <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
@@ -55,44 +55,84 @@
         <name>d</name>
         <desc>Open/Close canopy</desc>
       </key>
+      <key>
+        <name>S</name>
+        <desc>Start smoke</desc>
+      </key>
+      <key>
+        <name>u</name>
+        <desc>Stop smoke</desc>
+      </key>
     </help>
 
     <menubar include="Dialogs/lancair235-menu.xml"/>
 
     <weight n="0">
-        <name>Pilot</name>
-        <weight-lb>200</weight-lb>
-        <max-lb>250</max-lb>
-        <min-lb>100</min-lb>
+      <name>Pilot</name>
+      <weight-lb>200</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>100</min-lb>
     </weight>
 
     <weight n="1">
-        <name>Copilot</name>
-        <weight-lb>200</weight-lb>
-        <max-lb>250</max-lb>
-        <min-lb>0</min-lb>
+      <name>Copilot</name>
+      <weight-lb>200</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
     </weight>
 
     <weight n="2">
-        <name>Pax</name>
-        <weight-lb>0</weight-lb>
-        <max-lb>250</max-lb>
-        <min-lb>0</min-lb>
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
     </weight>
 
     <weight n="3">
-        <name>Cargo</name>
-        <weight-lb>0</weight-lb>
-        <max-lb>250</max-lb>
-        <min-lb>0</min-lb>
+      <name>Cargo</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
     </weight>
 
+    <systems>
+      <autopilot>
+        <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kap140/autopilot/KAP140.xml</path>
+      </autopilot>
+    </systems>
+
   </sim>
- 
+
   <input>
     <keyboard include="Nasal/lancair235-keyboard.xml"/>
   </input>
- 
+
+  <systems>
+    <electrical>
+      <outputs>
+        <KNS80 type="string">28</KNS80>
+        <comm type="string">28</comm>
+      </outputs>
+    </electrical>
+  </systems>
+
+  <instrumentation>
+    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/> 
+    <encoder>
+      <serviceable type="bool">1</serviceable>
+      <name>encoder</name>
+      <number>0</number>
+    </encoder>
+    <dme>
+      <name>dme</name>
+      <number>0</number>
+    </dme>     
+    <nav-radio>
+      <name>nav</name>
+      <number>0</number>
+    </nav-radio>
+  </instrumentation>
+
   <nasal>
     <doors>
       <file>Aircraft/Lancair-235/Nasal/doors.nas</file>
@@ -102,6 +142,47 @@
       <file>Aircraft/Lancair-235/Nasal/liveries.nas</file>
       <file>Aircraft/Lancair-235/Nasal/immat.nas</file>
     </lancair235>
+    <kcs55>
+   	<file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+      <script><![CDATA[
+        KCS55.new();
+      ]]></script>
+    </kcs55>
+    <kfc200>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kfc200/kfc200.nas</file>
+    </kfc200>
+    <kr87>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/kr87.nas</file>
+    </kr87>
+<!--
+    <chronograph>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/chronograph/chronograph.nas</file>
+    </chronograph>
+-->           
+    <ki266>
+      <file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
+      <script><![CDATA[
+        ki266.new(0);
+      ]]></script>
+    </ki266>
+    <kns80>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
+    </kns80>
+    <kap140>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kap140/autopilot/kap140.nas</file>
+      <!-- We can set some variables that might be
+           aircraft specific. We must do it after the file
+           to override the ones that are in the .nas file.
+           gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection";
+      -->
+      <script><![CDATA[ 
+        staticPressure = "systems/static/pressure-inhg";
+        ]]>
+      </script>
+    </kap140>
+    <zkv500>
+      <file>Aircraft/Instruments-3d/zkv500/ZKV500.nas</file>
+    </zkv500>
   </nasal>
    
 </PropertyList>

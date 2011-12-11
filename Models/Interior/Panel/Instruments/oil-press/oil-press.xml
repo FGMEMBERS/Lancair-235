@@ -2,13 +2,13 @@
 
 <PropertyList>
 
-  <path>hdg.ac</path>
+  <path>oil-press.ac</path>
 
   <animation>
-    <object-name>HDGgauge</object-name>
-    <object-name>HDG.knob</object-name>
-    <object-name>HDGneedle</object-name>
-    <object-name>HDGpointer</object-name>
+    <object-name>fond</object-name>
+    <object-name>fond2</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -27,8 +27,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>HDGpointer</object-name>
-    <object-name>HDGneedle</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -37,18 +37,23 @@
     </emission>
   </animation>
 
-  <animation>
-    <type>texrotate</type>
-    <object-name>HDGneedle</object-name>
-    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine/running</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry> <!--  0 bar -->
+      <entry><ind> 1 </ind><dep> 45 </dep></entry> <!-- 10 bar -->
+    </interpolation>
     <center>
-      <x> 0.5 </x>
-      <y> 0.5 </y>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.015 </z-m>  
     </center>
-    <axis>
-      <x>  0.0 </x>
-      <y>  0.0 </y>
-      <z> -1.0 </z>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 

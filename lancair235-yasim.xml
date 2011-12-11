@@ -28,7 +28,7 @@
   <!-- Cruise configuration -->
   <cruise speed="165" alt="5000" fuel="1.0">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.8"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
 
     <control-setting axis="/controls/flight/flaps" value="0"/>
@@ -48,12 +48,12 @@
         incidence="1"
         sweep="-4">
         <stall aoa="18" width="1" peak="1.5"/>
-        <flap0 start="0.05" end="0.68" lift="1.4" drag="1.5"/>
+        <flap0 start="0.05" end="0.68" lift="1.3" drag="1.4"/>
         <flap1 start="0.68" end="0.96" lift="1.2" drag="1.1"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
-        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+       <!-- <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/> -->
 
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
@@ -69,8 +69,8 @@
         taper="0.60"
         incidence="0"
         sweep="8">
-        <stall aoa="20" width="1" peak="1.5"/>
-        <flap0 start="0.1" end="1" lift="2.0" drag="1.1"/>
+        <stall aoa="16" width="4" peak="1.5"/>
+        <flap0 start="0.1" end="1" lift="1.8" drag="1.1"/>
 
         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -107,8 +107,7 @@
              cruise-power="150"
              takeoff-power="112"
              takeoff-rpm="2575"
-             min-rpm="600"
-             max-rpm="2700">
+             >
              <actionpt x="2.915" y="0.0" z="0.054" />
              <piston-engine eng-rpm="2800"
                             eng-power="160"
@@ -150,7 +149,7 @@
         <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
   </gear>
 
-  <!-- Fuel  1.323-->
+  <!-- Fuel -->
   <tank x="0.72" y="0" z="-0.272" capacity="169" />
 
   <!-- Pilot -->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>oil-temp.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>fond2</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine/oil-temperature-degf</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  0 </dep></entry> <!--   0 deg C -->
+      <entry><ind> 104 </ind><dep> 10 </dep></entry> <!--  40 deg C -->
+      <entry><ind> 140 </ind><dep> 20 </dep></entry> <!--  60 deg C -->
+      <entry><ind> 176 </ind><dep> 35 </dep></entry> <!--  80 deg C-->
+      <entry><ind> 212 </ind><dep> 50 </dep></entry> <!-- 100 deg C -->
+      <entry><ind> 266 </ind><dep> 65 </dep></entry> <!-- 130 deg C -->
+    </interpolation>
+    <center>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.015 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+

@@ -6,12 +6,12 @@
   <sim>
 
     <description>Lancair 235 (YASim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <author>Emmanuel BARANGER (3D/FDM) / Philippe BROCORENS (Panel)</author>
 
     <rating>
       <FDM type="int">     2 </FDM>
-      <systems type="int"> 1 </systems>
-      <cockpit type="int"> 1 </cockpit>
+      <systems type="int"> 3 </systems>
+      <cockpit type="int"> 2 </cockpit>
       <model type="int">   4 </model>
     </rating>
 
