@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -168,10 +168,10 @@
     <object-name>propblur</object-name>
   </animation>
 
-  <!-- Immatriculatoin
+  <!-- Immatriculatoin -->
   <model>
     <path>Aircraft/Lancair-235/Models/Immat/immat.xml</path>
-  </model> -->
+  </model>
 
   <!-- Une ombre pour OSG -->
   <model>
@@ -800,6 +800,7 @@
 
   <!-- Essais d'ajout des effets lumineux -->
   <model>
+    <name>beacon</name>
     <path>Aircraft/Lancair-235/Models/light/beacon.xml</path>
     <offsets>
       <x-m> 2.751 </x-m>
@@ -809,6 +810,7 @@
   </model>
 
   <model>
+     <name>beacon</name>
     <path>Aircraft/Lancair-235/Models/light/beacon.xml</path>
     <offsets>
       <x-m> -0.989 </x-m>
@@ -818,6 +820,7 @@
   </model>
 
   <model>
+    <name>navlight</name>
     <path>Aircraft/Lancair-235/Models/light/RedLight.xml</path>
     <offsets>
       <x-m> -0.981 </x-m>
@@ -827,7 +830,8 @@
   </model>
 
   <model>
-    <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
+    <name>strobelight</name>
+    <path>Aircraft/Lancair-235/Models/light/StrobeWhite.xml</path>
     <offsets>
       <x-m> -0.961 </x-m>
       <y-m> -3.490 </y-m>
@@ -835,7 +839,11 @@
     </offsets>
   </model>
 
+
+
+
   <model>
+    <name>navlight</name>
     <path>Aircraft/Lancair-235/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -0.981 </x-m>
@@ -845,13 +853,93 @@
   </model>
 
   <model>
-    <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
+    <name>strobelight</name>
+    <path>Aircraft/Lancair-235/Models/light/StrobeWhite.xml</path>
     <offsets>
       <x-m> -0.961 </x-m>
       <y-m>  3.490 </y-m>
       <z-m> -0.147 </z-m>
     </offsets>
   </model>
+
+ <animation>
+    <type>select</type>
+    <object-name>strobelight</object-name>
+    <condition>
+       <equals>
+        <property>controls/switches/strobe-lights</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
+ <animation>
+    <type>select</type>
+    <object-name>navlight</object-name>
+    <condition>
+       <equals>
+        <property>controls/switches/nav-lights</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
+ <animation>
+    <type>select</type>
+    <object-name>beacon</object-name>
+    <condition>
+       <equals>
+        <property>controls/switches/flashing-beacon</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
+
+  <!-- Wing light cone -->
+  <model>
+    <name>Wing1-Light</name>
+    <path>Aircraft/Lancair-235/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>       -0.9 </x-m>
+      <y-m>       -1.12 </y-m>
+      <z-m>       -0.5 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <name>Wing2-Light</name>
+    <path>Aircraft/Lancair-235/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>       -0.9 </x-m>
+      <y-m>        1.12 </y-m>
+      <z-m>       -0.5 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+    </offsets>
+  </model>
+  <animation>
+    <name>AllWingLight</name>
+    <object-name>Wing1-Light</object-name>
+    <object-name>Wing2-Light</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllWingLight</object-name>
+    <condition>
+      <and>
+      <equals>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
+      </equals>
+       <equals>
+        <property>gear/gear/position-norm</property>
+        <value> 1 </value>
+      </equals>
+       </and>
+    </condition>
+  </animation>
+
 
 </PropertyList>
 

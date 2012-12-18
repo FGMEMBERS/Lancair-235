@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>MagneticCompass.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>Marker</object-name>
+    <object-name>Case</object-name>
     <object-name>Ball</object-name>
-
+    <object-name>Marker</object-name>
+    
     <object-name>vitre</object-name>
   </animation>
 
@@ -26,13 +26,12 @@
 
   <animation>
     <type>material</type>
-    <object-name>Marker</object-name>
     <object-name>Ball</object-name>
     <emission>
-      <red>   1.0 </red>
-      <green> 0.2 </green>
-      <blue>  0.0 </blue>
-      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -46,11 +45,10 @@
       <z-m>  0.000 </z-m>
     </center> 
     <axis>
-     <x> 0.0 </x>
-     <y> 0.0 </y>
-     <z> 1.0 </z>
+     <x> 0 </x>
+     <y> 0 </y>
+     <z> 1 </z>
     </axis>
   </animation>
 
 </PropertyList>
-

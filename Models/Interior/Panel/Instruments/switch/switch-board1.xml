@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>switch-board1.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>plaque1</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+ 
+  <!-- Radio Master -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/radio-master.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.056 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+
+  <!-- Boost Pump -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/boost-pump.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.034 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+  
+  <!-- xfer pump left -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/xfer-left.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.011 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+  
+  <!-- xfer pump right -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/xfer-right.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.011 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+  
+  <!-- Pitot heat -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/pitot-heat.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.034 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+  
+  <!-- Carburator-heat -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/carb-heat.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.056 </y-m>
+      <z-m> -0.007 </z-m>      
+    </offsets>
+  </model>
+
+</PropertyList>

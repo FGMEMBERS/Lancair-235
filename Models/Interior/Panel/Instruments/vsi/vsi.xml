@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>vsi.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>VSIgauge</object-name>
+    <object-name>VSIface</object-name>
+    <object-name>VSIneedle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -26,8 +26,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>VSIface</object-name>
+    <object-name>VSIneedle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -38,7 +38,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>needle</object-name>
+    <object-name>VSIneedle</object-name>
     <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <interpolation>
       <entry><ind> -2000 </ind><dep> -173.0 </dep></entry>
@@ -59,4 +59,3 @@
   </animation>
 
 </PropertyList>
-

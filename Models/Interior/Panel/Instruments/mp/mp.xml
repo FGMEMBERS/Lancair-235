@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -6,9 +6,9 @@
 
   <animation>
     <object-name>fond</object-name>
+    <object-name>visses</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-    <object-name>visses</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -30,17 +30,17 @@
     <object-name>face</object-name>
     <object-name>needle</object-name>
     <emission>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>engines/engine[0]/mp-osi</property>
+    <property>/engines/engine[0]/mp-osi</property>
     <interpolation>
       <entry><ind>  5 </ind><dep> -116 </dep></entry>     
       <entry><ind> 10 </ind><dep>  -96 </dep></entry>     
@@ -60,4 +60,3 @@
   </animation>
 
 </PropertyList>
-

@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Base: The sounds of the FK9 Mark 2 by Maik JUSTUS -->
- 
+<!-- Base: The sounds of the FK9 Mark 2 by Maik JUSTUS 
+  -Modifié par Chistian Thiriot "Patten" -->
 <PropertyList>
 
   <fx>
- 
     <crank>
       <name>engstart</name>
       <path>Aircraft/Lancair-235/Sounds/eng_start_ext1_part1.wav</path>
       <condition>
         <and>
-          <property>/engines/engine/cranking</property>
+          <property>/engines/engine[0]/cranking</property>
           <property>/sim/current-view/internal</property>
         </and>
       </condition>
       <volume>
         <offset>0.4</offset>
       </volume>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
@@ -27,478 +31,682 @@
       <path>Aircraft/Lancair-235/Sounds/eng_start_int1_part1.wav</path>
       <condition>
         <and>
-          <property>/engines/engine/cranking</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
+          <property>/engines/engine[0]/cranking</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
         </and>
       </condition>
       <volume>
         <offset>0.4</offset>
       </volume>
+      <position>
+        <x> -2.627 </x>
+        <y>  1.740 </y>
+        <z>  0.021 </z>
+      </position>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
 
-    <crank>
-      <name>crank</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_start_int1_part2.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/cranking</property>
-          <property>/sim/current-view/internal</property>
-          <not>
-            <property>/engines/engine/running</property>
-          </not>
+		<crank>
+			<name>crank</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_start_int1_part2.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/cranking</property>
+					<property>/sim/current-view/internal</property>
+					<not>
+						<property>/engines/engine[0]/running</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<offset>0.5</offset>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</crank>
+
+		<crank>
+			<name>crankext</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_start_ext1_part2.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/cranking</property>
+					<not>
+						<property>/sim/current-view/internal</property>
+					</not>
+					<not>
+						<property>/engines/engine[0]/running</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<offset>0.5</offset>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</crank>
+
+		<crank>
+			<name>cough</name>
+			<path>Sounds/coughing.wav</path>
+			<property>/engines/engine[0]/running</property>
+			<volume>
+				<offset>0.3</offset>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</crank>
+
+		<stopext>
+			<name>stopext</name>
+			<path>Aircraft/Lancair-235/Sounds/eng_stop_ext1.wav</path>
+			<condition>
+				<not>
+					<property>/engines/engine[0]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/current-view/internal</property>
+				<factor>-1.0</factor>
+				<offset>1.0</offset>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</stopext>
+
+		<stop>
+			<name>stop</name>
+			<path>Aircraft/Lancair-235/Sounds/eng_stop_int1.wav</path>
+			<condition>
+				<not>
+					<property>/engines/engine[0]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<property>/sim/current-view/internal</property>
+				<factor>1.0</factor>
+				<offset>0.0</offset>
+			</volume>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</stop>
+
+		<engine>
+			<name>engine</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_run_ext1_loop.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/running</property>
+					<not>
+						<property>/sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/mp-osi</property>
+				<factor>0.00375</factor>
+				<min>0.5</min>
+				<max>2.0</max>
+			</volume>
+			<pitch>
+				<property>/engines/engine[0]/rpm</property>
+				<factor>0.00028</factor>
+				<min>0.15</min>
+				<max>2.0</max>
+				<offset>-0.0</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</engine>
+
+		<engine>
+			<name>engineextslow</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_run_ext3_slow.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/running</property>
+					<not>
+						<property>/sim/current-view/internal</property>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/mp-osi</property>
+				<factor>0.00375</factor>
+				<min>0.5</min>
+				<max>2.0</max>
+			</volume>
+			<pitch>
+				<property>/engines/engine[0]/rpm</property>
+				<factor>0.0005</factor>
+				<min>0.35</min>
+				<max>2.0</max>
+				<offset>-0.0</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</engine>
+
+		<propellerhigh>
+			<name>propellerhigh</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_run_int_4430.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/running</property>
+					<property>/sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/mp-osi</property>
+				<factor>0.00375</factor>
+				<min>0.5</min>
+				<max>2.0</max>
+			</volume>
+			<!--
+			<volume>
+			<property>/orientation/alpha-deg</property>
+			<type>log</type>
+			<min>0.2</min>
+			<max>1.0</max>
+			</volume>
+			<volume>
+			<property>/sim/current-view/internal</property>
+			<factor>0.5</factor>
+			</volume>-->
+			<pitch>
+				<property>/engines/engine[0]/rpm</property>
+				<factor>0.000226</factor>
+				<min>0.15</min>
+				<max>4.0</max>
+				<offset>-0.0</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</propellerhigh>
+
+		<propellerlow>
+			<name>propellerlow</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/eng_run_int_1340.wav</path>
+			<condition>
+				<and>
+					<property>/engines/engine[0]/running</property>
+					<property>/sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/mp-osi</property>
+				<factor>0.00375</factor>
+				<min>0.5</min>
+				<max>2.0</max>
+			</volume>
+			<!--
+			<volume>
+			<property>/orientation/alpha-deg</property>
+			<type>log</type>
+			<min>0.2</min>
+			<max>1.0</max>
+			</volume>
+			<volume>
+			<property>/sim/current-view/internal</property>
+			<factor>0.5</factor>
+			</volume>
+			-->
+			<pitch>
+				<property>/engines/engine[0]/rpm</property>
+				<factor>0.0007462</factor>
+				<min>0.5</min>
+				<max>4.0</max>
+				<offset>-0.0</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+			<position>
+				<x>-2.627</x>
+				<y>1.740</y>
+				<z>0.021</z>
+			</position>
+		</propellerlow>
+
+		<rumble>
+			<name>rumble</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/rumble.wav</path>
+			<condition>
+				<or>
+					<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+				</or>
+				<!-- <property>/sim/current-view/internal</property> -->
+			</condition>
+			<volume>
+				<property>/velocities/groundspeed-kt</property>
+				<!--type>log</type-->
+				<factor>0.025</factor>
+				<offset> -0.01</offset>
+				<max>1.01</max>
+				<min>0.01</min>
+			</volume>
+			<pitch>
+				<property>/velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+				<offset>0.85</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</rumble>
+
+		<squeal>
+			<name>squeal</name>
+			<path>Aircraft/Lancair-235/Sounds/wow.wav</path>
+			<condition>
+				<or>
+					<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+				</or>
+			</condition>
+			<volume>
+				<property>/velocities/speed-down-fps</property>
+				<factor>0.5</factor>
+				<max>1.0</max>
+			</volume>
+			<volume>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.1</factor>
+				<max>1.0</max>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.0</offset>
+			</pitch>
+			<reference-dist>100</reference-dist>
+			<max-dist>1000</max-dist>
+		</squeal>
+
+ <!-- <flap>
+        <name>flaps</name>
+        <mode>in-transit</mode>
+        <path>Aircraft/Lancair-235/Sounds/flaps.wav</path>
+        <property>surface-positions/flaps-pos-norm</property>
+        <volume>
+            <factor>0.5</factor>
+        </volume>
+        <position>
+            <x>1.0</x>
+            <y>0</y>
+            <z>1</z>
+        </position>
+        <reference-dist>10</reference-dist>
+        <max-dist>20</max-dist>
+    </flap>-->
+
+		<flap>
+			<name>flaps</name>
+			<mode>in-transit</mode>
+			<path>Aircraft/Lancair-235/Sounds/flaps.wav</path>
+			<property>/surface-positions/flap-pos-norm</property>
+			<volume>
+				<factor>0.8</factor>
+			</volume>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>20.0</max-dist>
+		</flap> 
+
+		<wind>
+			<name>wind</name>
+			<mode>looped</mode>
+			<path>Sounds/wind.wav</path>
+			<property>/velocities/airspeed-kt</property>
+			<volume>
+				<property>/position/altitude-ft</property>
+				<factor>-0.000015</factor>
+				<offset>1.0</offset>
+				<min>0.0</min>
+				<max>1.0</max>
+			</volume>
+			<volume>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.0015</factor>
+				<min>0.0</min>
+				<max>0.25</max>
+			</volume>
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.0035</factor>
+				<offset>1.25</offset>
+			</pitch>
+		</wind>
+                          <gear>
+        <name>gear</name>
+        <mode>in-transit</mode>
+        <path>Aircraft/Lancair-235/Sounds/gear.wav</path>
+        <property>gear/gear[0]/position-norm</property>
+        <pitch>
+            <internal>dt_play</internal>
+            <offset>1.0</offset>
+            <factor>-0.001</factor>
+        </pitch>
+        <position>
+            <x>0.0</x>
+            <y>0</y>
+            <z>-2</z>
+        </position>
+        <reference-dist>5.0</reference-dist>
+        <max-dist>10.0</max-dist>
+    </gear>
+
+		<gear-warn>
+            <name>gear warning</name>
+            <mode>looped</mode>
+            <path>Aircraft/Lancair-235/Sounds/gear-hrn.wav</path>
+            <condition>
+				<or>
+				<and>
+					<equals>
+						<property>/controls/lighting/gearwrn</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/controls/switches/test-transit-button</property>
+						<value>1</value>
+					</equals>
+				</and>
+				<and>
+					<equals>
+						<property>/controls/lighting/gearwrn</property>
+						<value>1</value>
+					</equals>
+					<or>
+						<less-than>
+							<property>/controls/engines/engine[0]/throttle</property>
+							<value>0.25</value>
+						</less-than>
+						<less-than>
+							<property>/controls/engines/engine[1]/throttle</property>
+							<value>0.25</value>
+						</less-than>
+						<equals>
+							<property>/controls/flight/flaps</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<or>
+					  <less-than>
+						<property>gear/gear[0]/position-norm</property>
+						<value>0.95</value>
+					  </less-than>
+					  <less-than>
+						<property>gear/gear[1]/position-norm</property>
+						<value>0.95</value>
+					  </less-than>
+					  <less-than>
+						<property>gear/gear[2]/position-norm</property>
+						<value>0.95</value>
+					  </less-than>
+					</or>
+				</and>
+				</or>
+            </condition>
+			<position>
+				<x>-2.0</x>
+				<y>0.40</y>
+				<z>1.40</z>
+			</position>
+			<reference-dist>2.0</reference-dist>
+			<max-dist>5.0</max-dist>
+		</gear-warn>
+		
+		<!--                  Toggle Switches                  -->     
+		<click> 
+		<name>Battery on</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition> 
+		<property>controls/electric/battery-switch</property>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Battery off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition> 
+		<not> 
+		<property>controls/electric/battery-switch</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Fuel Pump on</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition> 
+		<property>controls/engines/engine[0]/fuel-pump</property>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Fuel Pump off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition> 
+		<not> 
+		<property>controls/engines/engine[0]/fuel-pump</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click>
+		<name>Landing Light On</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<property>controls/switches/landing-light</property>
+		</condition>
+		<volume>
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click>
+		<name>Landing Light Off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<not>
+		<property>controls/switches/landing-light</property>
+		</not>
+		</condition>
+		<volume>
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Magnetos-off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<not>
+		<property>controls/engines/engine[0]/magnetos</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Strobe Lights White</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<equals>
+		<property>controls/switches/strobe-lights</property>
+		<value>1</value>
+		</equals>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+                 <click> 
+		<name>Strobe Lights Off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<not> 
+		<property>controls/switches/strobe-lights</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+		
+
+                 <click> 
+		<name>Beacon On</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<equals>
+		<property>controls/switches/flashing-beacon</property>
+		<value>1</value>
+		</equals>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+                
+                <click> 
+		<name>Beacon Off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<not> 
+		<property>controls/switches/flashing-beacon</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Avionics Master On</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<property>controls/switches/avionic-master</property>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>
+
+		<click> 
+		<name>Avionics Master Off</name>
+		<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+		<condition>
+		<not>
+		<property>controls/switches/avionic-master</property>
+		</not>
+		</condition>
+		<volume> 
+		<factor>5.0</factor>
+		</volume>
+		</click>-->
+
+		<stall>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/Lancair-235/Sounds/stall.wav</path>
+			<condition>
+				<property>/sim/alarms/stall-warning</property>
+				<property>/sim/current-view/internal</property>
+			</condition>
+			<volume>
+				<property>/sim/alarms/stall-warning</property>
+				<max>1.0</max>
+			</volume>
+			<reference-dist>10.0</reference-dist>
+			<max-dist>20.0</max-dist>
+		</stall>
+		
+		<switch>
+			<name>click on</name>
+			<mode>once</mode>
+			<path>Aircraft/Lancair-235/Sounds/click.wav</path>
+			<condition>
+				<and>
+					<property>/sim/sound/switch</property>
+					<property>/sim/current-view/internal</property>
         </and>
       </condition>
       <volume>
-        <offset>0.5</offset>
+        <factor>5</factor>
       </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-
-    <crank>
-      <name>crankext</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_start_ext1_part2.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/cranking</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-          <not>
-            <property>/engines/engine/running</property>
-          </not>
-        </and>
-      </condition>
-      <volume>
-        <offset>0.5</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-
-    <crank>
-      <name>cough</name>
-      <path>Sounds/coughing.wav</path>
-      <property>/engines/engine/running</property>
-      <volume>
-        <offset>0.3</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-
-    <stopext>
-      <name>stopext</name>
-      <path>Aircraft/Lancair-235/Sounds/eng_stop_ext1.wav</path>
-      <condition>
-        <not>
-          <property>/engines/engine/running</property>
-        </not>
-      </condition>
-      <volume>
-        <property>/sim/current-view/internal</property>
-        <factor>-1.0</factor>
-        <offset>1.0</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </stopext>
-
-    <stop>
-      <name>stop</name>
-      <path>Aircraft/Lancair-235/Sounds/eng_stop_int1.wav</path>
-      <condition>
-        <not>
-          <property>/engines/engine/running</property>
-        </not>
-      </condition>
-      <volume>
-        <property>/sim/current-view/internal</property>
-        <factor>1.0</factor>
-        <offset>0.0</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </stop>
-
-    <engine>
-      <name>engine</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_run_ext1_loop.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/running</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-        </and>
-      </condition>
-      <volume>
-        <property>engines/engine/mp-osi</property>
-        <factor>0.00375</factor>
-        <min>0.5</min>
-        <max>2.0</max>
-      </volume>
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.00028</factor>
-        <min>0.15</min>
-        <max>2.0</max>
-        <offset>-0.0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-
-    <engine>
-      <name>engineextslow</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_run_ext3_slow.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/running</property>
-          <not>
-            <property>/sim/current-view/internal</property>
-          </not>
-        </and>
-      </condition>
-      <volume>
-        <property>engines/engine/mp-osi</property>
-        <factor>0.00375</factor>
-        <min>0.5</min>
-        <max>2.0</max>
-      </volume>
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.0005</factor>
-        <min>0.35</min>
-        <max>2.0</max>
-        <offset>-0.0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-
-    <propellerhigh>
-      <name>propellerhigh</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_run_int_4430.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/running</property>
-          <property>/sim/current-view/internal</property>
-        </and>
-      </condition>
-      <volume>
-        <property>engines/engine/mp-osi</property>
-        <factor>0.00375</factor>
-        <min>0.5</min>
-        <max>2.0</max>
-      </volume>
-      <!--
-      <volume>
-        <property>/orientation/alpha-deg</property>
-        <type>log</type>
-        <min>0.2</min>
-        <max>1.0</max>
-      </volume>
-      <volume>
-        <property>/sim/current-view/internal</property>
-        <factor>0.5</factor>
-      </volume>-->
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.000226</factor>
-        <min>0.15</min>
-        <max>4.0</max>
-        <offset>-0.0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </propellerhigh>
-
-    <propellerlow>
-      <name>propellerlow</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/eng_run_int_1340.wav</path>
-      <condition>
-        <and>
-          <property>/engines/engine/running</property>
-          <property>/sim/current-view/internal</property>
-        </and>
-      </condition>
-      <volume>
-        <property>engines/engine/mp-osi</property>
-        <factor>0.00375</factor>
-        <min>0.5</min>
-        <max>2.0</max>
-      </volume>
-      <!--
-      <volume>
-        <property>/orientation/alpha-deg</property>
-        <type>log</type>
-        <min>0.2</min>
-        <max>1.0</max>
-      </volume>
-      <volume>
-        <property>/sim/current-view/internal</property>
-        <factor>0.5</factor>
-      </volume>
-      -->
-      <pitch>
-        <property>/engines/engine/rpm</property>
-        <factor>0.0007462</factor>
-        <min>0.5</min>
-        <max>4.0</max>-
-        <offset>-0.0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </propellerlow>
-
-    <rumble>
-      <name>rumble</name>
-      <mode>looped</mode>
-      <path>Aircraft/Lancair-235/Sounds/rumble.wav</path>
-      <condition>
-        <or>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-        </or>
-        <!-- <property>/sim/current-view/internal</property> -->
-      </condition>
-      <volume>
-        <property>/velocities/groundspeed-kt</property>
-        <!--type>log</type-->
-        <factor>0.025</factor>
-        <offset> -0.01</offset>
-        <max>1.01</max>
-        <min>0.01</min>
-      </volume>
-      <pitch>
-        <property>/velocities/groundspeed-kt</property>
-        <factor>0.01</factor>
-        <offset>0.85</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </rumble>
-
-    <squeal>
-      <name>squeal</name>
-      <path>Aircraft/Lancair-235/Sounds/wow.wav</path>
-      <condition>
-        <or>
-          <property>/gear/gear[0]/wow</property>
-          <property>/gear/gear[1]/wow</property>
-          <property>/gear/gear[2]/wow</property>
-        </or>
-      </condition>
-      <volume>
-        <property>/velocities/speed-down-fps</property>
-        <factor>0.5</factor>
-        <max>1.0</max>
-      </volume>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.1</factor>
-        <max>1.0</max>
-      </volume>
-      <volume>
-        <internal>dt_stop</internal>
-        <factor>0.05</factor>
-        <max>1.0</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.0025</factor>
-        <offset>1.0</offset>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </squeal>
- 
-    <flap>
-      <name>flaps</name>
-      <mode>in-transit</mode>
-      <path>Sounds/flaps.wav</path>
-      <property>/surface-positions/flap-pos-norm</property>
-      <volume>
-        <factor>0.8</factor>
-      </volume>
-      <reference-dist>10.0</reference-dist>
-      <max-dist>20.0</max-dist>
-    </flap>
-
-    <wind>
-      <name>wind</name>
-      <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
-      <property>/velocities/airspeed-kt</property>
-      <volume>
-        <property>/position/altitude-ft</property>
-        <factor>-0.000015</factor>
-        <offset>1.0</offset>
-        <min>0.0</min>
-        <max>1.0</max>
-      </volume>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.0015</factor>
-        <min>0.0</min>
-        <max>0.25</max>
-      </volume>
-      <pitch>
-        <property>/velocities/airspeed-kt</property>
-        <factor>0.0035</factor>
-        <offset>1.25</offset>
-      </pitch>
-    </wind>
-
-    <!--                  Toggle Switches                  -->     
-    <click> 
-      <name>Battery on</name>
-      <path>Sounds/click.wav</path>
-      <condition> 
-        <property>controls/electric/battery-switch</property>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Battery off</name>
-      <path>Sounds/click.wav</path>
-      <condition> 
-        <not> 
-          <property>controls/electric/battery-switch</property>
-        </not>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Fuel Pump on</name>
-      <path>Sounds/click.wav</path>
-      <condition> 
-        <property>controls/engines/engine/fuel-pump</property>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Fuel Pump off</name>
-      <path>Sounds/click.wav</path>
-      <condition> 
-        <not> 
-          <property>controls/engines/engine/fuel-pump</property>
-        </not>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
- 
-    <click>
-      <name>Landing Light On</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <property>controls/switches/landing-light</property>
-      </condition>
-      <volume>
-        <factor>1.0</factor>
-      </volume>
-    </click>
-      
-    <click>
-      <name>Landing Light Off</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <not>
-          <property>controls/switches/landing-light</property>
-        </not>
-      </condition>
-      <volume>
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Magnetos-off</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <not>
-          <property>controls/engines/engine/magnetos</property>
-        </not>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Strobe Lights White</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <equals>
-          <property>controls/switches/strobes</property>
-          <value>1</value>
-        </equals>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Strobe Lights Off</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <not> 
-          <property>controls/switches/strobes</property>
-        </not>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
-    <click> 
-      <name>Avionics Master On</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <property>controls/switches/avionic-master</property>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
- 
-    <click> 
-      <name>Avionics Master Off</name>
-      <path>Sounds/click.wav</path>
-      <condition>
-        <not>
-          <property>controls/switches/avionic-master</property>
-        </not>
-      </condition>
-      <volume> 
-        <factor>1.0</factor>
-      </volume>
-    </click>
-
+    </switch>
   </fx>
 
 </PropertyList>

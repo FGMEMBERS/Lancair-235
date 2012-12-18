@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>switch.ac</path>
+
+  <animation>
+    <object-name>switch</object-name>
+    <object-name>tour</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>switch</object-name>
+    <object-name>tour</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>

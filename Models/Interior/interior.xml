@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,7 +7,8 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-    <object-name>tour</object-name>
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
@@ -33,9 +34,9 @@
     <name>Pilote</name>
     <path>Aircraft/Lancair-235/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -0.844 </x-m>
-      <y-m> -0.207 </y-m>
-      <z-m> -0.213 </z-m>
+      <x-m> -0.750 </x-m>
+      <y-m> -0.250 </y-m>
+      <z-m> -0.193 </z-m>
     </offsets>
   </model>
 
@@ -43,12 +44,14 @@
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/panel.xml</path>
     <offsets>
+      <!--
       <x-m> -1.172 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.176 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg>   0.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+       -->
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m>  0 </z-m>
     </offsets>
   </model>
 
@@ -70,7 +73,6 @@
 
   <!-- Les palonniers
   <model>
-    <name>Pilote</name>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/pedals/pedals.xml</path>
     <offsets>
       <x-m> -2.047 </x-m>
@@ -80,7 +82,6 @@
   </model>
 
   <model>
-    <name>Pilote</name>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/pedals/pedals.xml</path>
     <offsets>
       <x-m> -2.047 </x-m>
@@ -159,4 +160,3 @@
   </animation> -->
 
 </PropertyList>
-

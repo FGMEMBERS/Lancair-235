@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>oil-temp.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>fond2</object-name>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -27,8 +26,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -39,8 +38,8 @@
 
   <animation> 
     <type>rotate</type>
-    <object-name>needle</object-name>
-    <property>engines/engine/oil-temperature-degf</property>
+    <object-name>Needle</object-name>
+    <property>/engines/engine/oil-temperature-degf</property>
     <interpolation>
       <entry><ind>   0 </ind><dep>  0 </dep></entry> <!--   0 deg C -->
       <entry><ind> 104 </ind><dep> 10 </dep></entry> <!--  40 deg C -->

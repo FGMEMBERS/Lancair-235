@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
   <sim include="Nasal/views.xml">
 
+    <description>Lancair 235 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM) / Philippe BROCORENS (Panel)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -25,8 +27,9 @@
     </model>
 
     <flaps>
-      <setting> 0 </setting>
-      <setting> 1 </setting> <!-- 20 deg -->
+      <setting> 0.00 </setting>
+      <setting> 0.50 </setting> <!-- 15 deg -->
+      <setting> 1.00 </setting> <!-- 30 deg -->
     </flaps>
 
     <multiplay>
@@ -38,7 +41,7 @@
         <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
         <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
         <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
-        <int type="bool" n="6"> 0 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="bool" n="6" alias="controls/smoke"> 0 </int>               <!-- 6 smoke/bomb/torpedo -->
         <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
         <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
         <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
@@ -111,13 +114,28 @@
     <electrical>
       <outputs>
         <KNS80 type="string">28</KNS80>
-        <comm type="string">28</comm>
+        <comm type="string">28</comm>                
+        <comm n="1" type="string">28</comm>
       </outputs>
     </electrical>
   </systems>
 
-  <instrumentation>
-    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/> 
+  <instrumentation>  
+    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml">
+      <ka51>
+        <slaved type="bool">true</slaved>
+      </ka51>
+    </kcs55>
+    <adf>
+      <adf-btn type="bool">true</adf-btn>
+      <bfo-btn type="bool">false</bfo-btn>
+      <volume-norm type="double">0.5</volume-norm>
+      <power-btn type="bool">true</power-btn>
+      <frequencies>
+        <standby-khz type="int">291</standby-khz>
+        <selected-khz type="int">379</selected-khz>
+      </frequencies>
+    </adf>
     <encoder>
       <serviceable type="bool">1</serviceable>
       <name>encoder</name>
@@ -134,6 +152,9 @@
   </instrumentation>
 
   <nasal>
+    <garmin196>
+      <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+    </garmin196>
     <doors>
       <file>Aircraft/Lancair-235/Nasal/doors.nas</file>
     </doors>
@@ -142,28 +163,27 @@
       <file>Aircraft/Lancair-235/Nasal/liveries.nas</file>
       <file>Aircraft/Lancair-235/Nasal/immat.nas</file>
     </lancair235>
-    <kcs55>
-   	<file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
-      <script><![CDATA[
-        KCS55.new();
-      ]]></script>
-    </kcs55>
-    <kfc200>
-      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kfc200/kfc200.nas</file>
-    </kfc200>
-    <kr87>
-      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/kr87.nas</file>
-    </kr87>
-<!--
     <chronograph>
-      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/chronograph/chronograph.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/chronograph.nas</file>
     </chronograph>
--->           
+    <kcs55>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+      <script>
+        <![CDATA[
+          KCS55.new();
+        ]]>
+      </script>
+    </kcs55>
+    <kr87>
+         <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/kr87.nas</file>
+    </kr87>	      
     <ki266>
       <file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
-      <script><![CDATA[
-        ki266.new(0);
-      ]]></script>
+      <script>
+        <![CDATA[
+          ki266.new(0);
+        ]]>
+      </script>
     </ki266>
     <kns80>
       <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
@@ -173,10 +193,11 @@
       <!-- We can set some variables that might be
            aircraft specific. We must do it after the file
            to override the ones that are in the .nas file.
-           gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection";
-      -->
-      <script><![CDATA[ 
-        staticPressure = "systems/static/pressure-inhg";
+            gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection";
+        -->
+      <script>
+        <![CDATA[ 
+          staticPressure = "systems/static/pressure-inhg";
         ]]>
       </script>
     </kap140>
@@ -186,4 +207,3 @@
   </nasal>
    
 </PropertyList>
-

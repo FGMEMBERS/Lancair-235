@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>turn.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>face</object-name>
+    <object-name>Face</object-name>
+    <object-name>PtrTip</object-name>   
     <object-name>BallEnclosure</object-name>
     <object-name>needle</object-name>
     <object-name>Ball</object-name>
@@ -28,8 +28,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>   
+    <object-name>Face</object-name>
+    <object-name>needle</object-name>
     <object-name>BallEnclosure</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
@@ -42,8 +42,8 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
-    <factor> 20 </factor>
+    <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+    <factor>20.0</factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -54,8 +54,8 @@
   <animation>
     <type>rotate</type>
     <object-name>Ball</object-name>
-    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
-    <factor> 21 </factor>
+    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <factor>21</factor>
     <min-deg> -19 </min-deg>
     <max-deg>  19 </max-deg>
     <center>
@@ -71,5 +71,3 @@
   </animation>
 
 </PropertyList>
-
-

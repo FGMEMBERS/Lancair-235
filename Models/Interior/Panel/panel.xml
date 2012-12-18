@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -11,215 +11,13 @@
     <!-- Objets transparents -->
   </animation>
 
-  <!-- turn ball -->
-  <model>
-   <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/turn/turn.xml</path>
-   <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m> -0.309 </y-m>
-      <z-m> -0.070 </z-m>
-   </offsets>
-  </model>
-
-  <!-- asi -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/asi/asi.xml</path>
-    <offsets>
-      <x-m>  0.115 </x-m>
-      <y-m> -0.309 </y-m>
-      <z-m>  0.006 </z-m>
-    </offsets>
-  </model>
-
-  <!-- ai -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kfc200/ki256.xml</path>
-    <offsets>
-      <x-m>  0.113 </x-m>
-      <y-m> -0.224 </y-m>
-      <z-m>  0.023 </z-m>
-    </offsets>
-  </model>
-
-  <!-- alt -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/alt/alt.xml</path>
-    <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m> -0.142 </y-m>
-      <z-m>  0.006 </z-m>
-    </offsets>
-  </model>
-
-  <!-- compass mag -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/MagneticCompass/MagneticCompass.xml</path>
-    <offsets>
-      <x-m>  0.114 </x-m>
-      <y-m> -0.000 </y-m>
-      <z-m>  0.105 </z-m>
-    </offsets>
-  </model>
-
-  <!-- hdg
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/hdg/hdg.xml</path>
-    <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m> -0.309 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model>
-  -->
-
-  <!-- ADF -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/ki227-01.xml</path>
-    <offsets>
-      <x-m>  0.121 </x-m>
-      <y-m> -0.394 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model>
-
-  <!-- ki206 -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
-    <offsets>
-      <x-m>  0.130 </x-m>
-      <y-m> -0.060 </y-m>
-      <z-m>  0.017 </z-m>
-    </offsets>
-  </model>
-
-  <!-- DME -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/dme/ki266.xml</path>
-    <offsets>
-      <x-m>  0.130 </x-m>
-      <y-m> -0.060 </y-m>
-      <z-m>  0.070 </z-m>
-    </offsets>
-  </model>
-
-  <!-- GPS -->
-  <model>
-    <path>Aircraft/Instruments-3d/zkv500/ZKV500.xml</path>
-    <offsets>
-      <x-m>  0.120 </x-m>
-      <y-m> -0.060 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model>
-
-  <!-- hsi -->
-  <model>
-   <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/ki525a.xml</path>
-     <offsets>
-      <x-m>  0.117 </x-m>
-      <y-m> -0.222 </y-m>
-      <z-m> -0.070 </z-m>
-   </offsets>
-  </model>
-
-  <!-- hsi mode -->
-  <model>
-   <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/ka51b.xml</path>
-   <offsets>
-      <x-m>  0.117 </x-m>
-      <y-m> -0.127 </y-m>
-      <z-m>  0.070 </z-m>
-   </offsets>
-  </model>
-
-  <!-- vsi -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
-    <offsets>
-      <x-m>  0.115 </x-m>
-      <y-m> -0.142 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model> 
-
-  <!-- MAP -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/mp/mp.xml</path>
-    <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m>  0.200 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model>
-
-  <!-- RPM -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/tach/tach.xml</path>
-    <offsets>
-      <x-m> 0.116 </x-m>
-      <y-m> 0.200 </y-m>
-      <z-m> 0.007 </z-m>
-    </offsets>
-  </model>
-
-  <!-- oil press -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/oil-press/oil-press.xml</path>
-    
-    <offsets>
-      <x-m>  0.121 </x-m>
-      <y-m>  0.280 </y-m>
-      <z-m> -0.070 </z-m>
-    </offsets>
-  </model>
-
-  <!-- oil temp -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/oil-temp/oil-temp.xml</path>
-    <offsets>
-      <x-m> 0.121 </x-m>
-      <y-m> 0.280 </y-m>
-      <z-m> 0.007 </z-m>
-    </offsets>
-  </model>
-
-  <!-- fuel -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/fuel/fuelC.xml</path>
-    <offsets>
-      <x-m> 0.121 </x-m>
-      <y-m> 0.360 </y-m>
-      <z-m> 0.007 </z-m>
-    </offsets>
-  </model>
-
-  <!-- clock
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/chronograph/chronograph.xml</path>
-    <offsets>
-      <x-m> 0.113 </x-m>
-      <y-m> 0.300 </y-m>
-      <z-m> 0.007 </z-m>
-    </offsets>
-  </model>
-  -->
-  <!-- Les alertes -->
-  <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/warning/warning.xml</path>
-    <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m> -0.000 </y-m>
-      <z-m>  0.100 </z-m>
-    </offsets>
-  </model>
-
-  <!-- KAP140 -->
+  <!--KAP140 -->
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kap140/KAP140TwoAxisAlt.xml</path>
-    <offsets>
-      <x-m> 0.116 </x-m>
-      <y-m> 0.069 </y-m>
-      <z-m> 0.060 </z-m>
+    <offsets> 
+      <x-m> -1.034 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.268 </z-m>
     </offsets>
   </model>
 
@@ -227,9 +25,9 @@
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kns80/kns80.xml</path>
     <offsets>
-      <x-m> 0.118 </x-m>
-      <y-m> 0.069 </y-m>
-      <z-m> 0.002 </z-m>
+      <x-m> -1.032 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.210 </z-m>
     </offsets>
   </model>
 
@@ -237,19 +35,19 @@
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/kr87.xml</path>
     <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m>  0.069 </y-m>
-      <z-m> -0.053 </z-m>
+      <x-m> -1.033 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.155 </z-m>
     </offsets>
   </model>
 
-  <!--ky196-->
+  <!--kx165-->
   <model>
-    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/ky196/ky196-comm1.xml</path>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kx165/kx165-1.xml</path>
     <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m>  0.069 </y-m>
-      <z-m> -0.088 </z-m>
+      <x-m> -1.043 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.113 </z-m>
     </offsets>
   </model>
 
@@ -257,42 +55,274 @@
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/KT76A/KT76A.xml</path>
     <offsets>
-      <x-m>  0.109 </x-m>
-      <y-m>  0.069 </y-m>
-      <z-m> -0.127 </z-m>
+      <x-m>-1.039 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.063 </z-m>
+    </offsets>
+  </model>  
+ 
+  <!-- ai -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -1.058 </x-m>
+      <y-m>  0.230 </y-m>
+      <z-m>  0.236 </z-m>
+      </offsets>
+  </model>
+  
+  <!-- ai -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kfc200/ki256.xml</path>
+    <offsets>
+      <x-m> -1.059 </x-m>
+      <y-m> -0.224 </y-m>
+      <z-m>  0.202 </z-m>
     </offsets>
   </model>
 
- <!-- Magnetos -->
+  <!-- hsi -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/ki525a.xml</path>
+     <offsets>
+      <x-m> -1.053 </x-m>
+      <y-m> -0.224 </y-m>
+      <z-m>  0.106 </z-m>
+   </offsets>
+  </model>
+  
+  <!-- asi -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  -1.056</x-m>
+      <y-m>  -0.315 </y-m>
+      <z-m>   0.182 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- alt -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m> -0.132 </y-m>
+      <z-m>  0.182 </z-m>
+    </offsets>
+  </model>
+
+  <!-- vsi -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -1.051 </x-m>
+      <y-m> -0.132 </y-m>
+      <z-m>  0.106 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- turn ball -->
+  <model>
+   <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+   <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m> -0.315 </y-m>
+      <z-m>  0.106 </z-m>
+   </offsets>
+  </model>
+
+  <!-- GPS console-->
+  <model>
+    <path>Aircraft/Instruments-3d/zkv500/ZKV500.xml</path>
+    <offsets>
+      <x-m> -1.003 </x-m>
+      <y-m> -0.462 </y-m>
+      <z-m>  0.010 </z-m>
+      <roll-deg>    -5 </roll-deg>
+      <pitch-deg>  -20 </pitch-deg>
+      <heading-deg> 20 </heading-deg>
+    </offsets>
+  </model> 
+   
+  <!-- Magnetos -->
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/magneto/mags.xml</path>
     <offsets>
-      <x-m>  0.116 </x-m>
-      <y-m> -0.385 </y-m>
-      <z-m>  0.006 </z-m>
+      <x-m>  -1.056 </x-m>
+      <y-m>  -0.430 </y-m>
+      <z-m>   0.158 </z-m>
+      <roll-deg> -90 </roll-deg>
     </offsets>
   </model>
 
- <!-- throttle 
+  <!-- compass mag -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/MagneticCompass/MagneticCompass.xml</path>
+    <offsets>
+      <x-m> -1.058 </x-m>
+      <y-m> -0.000 </y-m>
+      <z-m>  0.291 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RMI -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/RMI/rmi.xml</path>
+    <offsets>
+      <x-m> -1.060 </x-m>
+      <y-m> -0.394 </y-m>
+      <z-m>  0.106 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> -1.052 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m>  0.236 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAP -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/mp/mp.xml</path>    
+    <offsets>
+      <x-m> -1.052 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m>  0.164 </z-m>
+    </offsets>
+  </model>
+
+  <!-- EGT -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/egt/egt.xml</path>    
+    <offsets>
+      <x-m> -1.052 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m>  0.088 </z-m>
+    </offsets>
+  </model>
+
+  <!-- DME -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/dme/ki266.xml</path>
+    <offsets>
+      <x-m> -1.057 </x-m>
+      <y-m> -0.132 </y-m>
+      <z-m>  0.236 </z-m>
+    </offsets>
+  </model>
+
+  <!-- oil press -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/oil-press/oil-press.xml</path>  
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m>  0.190 </y-m>
+      <z-m>  0.088 </z-m>
+    </offsets>
+  </model>
+
+  <!-- oil temp -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/oil-temp/oil-temp.xml</path> 
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m>  0.240 </y-m>
+      <z-m>  0.088 </z-m>
+    </offsets>
+  </model>
+
+ <!-- Fuel -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/fuel/fuelC.xml</path>
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m>  0.290 </y-m>
+      <z-m>  0.088 </z-m>
+    </offsets>
+  </model>
+
+  <!-- batt charge -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/charge/charge.xml</path>
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m>  0.340 </y-m>
+      <z-m>  0.088 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- Les alertes -->
+  <model>
+   <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/warning/warning.xml</path>  
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m> -0.170 </y-m>
+      <z-m>  0.263 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Garmin 196 -->
+  <model> 
+    <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
+    <offsets>
+      <x-m> -1.051 </x-m>
+      <y-m>  0.250 </y-m>
+      <z-m>  0.160 </z-m>
+   </offsets>
+  </model>
+
+  <!-- throttle -->
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/divers/throttle.xml</path>
     <offsets>
-      <x-m>  0.080 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.110 </z-m>
+      <x-m> -1.02839 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.02400 </z-m>
     </offsets>
   </model>
-  -->
-  <!-- mixture 
+  
+  <!-- mixture -->
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/divers/mixture.xml</path>
     <offsets>
-      <x-m>  0.080 </x-m>
-      <y-m>  0.100 </y-m>
-      <z-m> -0.110 </z-m>
+      <x-m> -1.02839 </x-m>
+      <y-m>  0.05000 </y-m>
+      <z-m> -0.02400 </z-m>
     </offsets>
+  </model> 
+  
+  <!--switch-board 1 --> 
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/switch-board1.xml</path>
+    <offsets>
+      <x-m> -1.03176 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.02367 </z-m>       
+    </offsets>
+  </model> 
+
+  <!--switch-board 2 --> 
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/switch-board2.xml</path>
+    <offsets>
+      <x-m> -1.056 </x-m>
+      <y-m> -0.312 </y-m>
+      <z-m>  0.231 </z-m>
+    </offsets>
+  </model>   
+
+  <!-- clock  -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/chronograph/chronograph.xml</path>
+    <offsets>
+      <x-m> -1.052 </x-m>
+      <y-m> -0.378 </y-m>
+      <z-m>  0.178 </z-m>
+    </offsets>   
   </model>
-  -->
-
+  
 </PropertyList>
-

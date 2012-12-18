@@ -24,7 +24,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
-# $Id$
+# $Id: kcs55.nas,v 1.1 2009/09/26 19:03:26 helijah Exp $
 
 var D2R = globals.D2R;
 var R2D = globals.R2D;

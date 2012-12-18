@@ -71,7 +71,6 @@
     </emission>
   </animation>
 
-
 <animation>
     <type>material</type>
     <object-name>warning01</object-name>
@@ -80,11 +79,32 @@
       <red>   1.0 </red>
       <green> 1.0 </green>
       <blue>  1.0 </blue>
-      <factor-prop>/controls/engines/engine/cutoff</factor-prop>
+   <factor-prop>/controls/engines/engine/cutoff</factor-prop>
+    
     </emission>
   </animation>
 -->
-<animation>
+
+<!-- Alarmes fuel réserve 10l 1 litre= 0.264172052 gallons-->
+  <animation>
+    <type>material</type>
+    <object-name>warning03</object-name>
+    <condition>
+      <and>
+         <less-than>
+           <property>consumables/fuel/tank[0]/level-gal_us</property>
+           <value>2.64172052</value> <!-- 10 litres -->
+         </less-than>
+      </and>
+    </condition>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+<!--animation>
     <type>material</type>
     <object-name>warning03</object-name>
     <emission>
@@ -93,7 +113,7 @@
       <blue>  1.0 </blue>
       <factor-prop>/engines/engine/out-of-fuel</factor-prop>
     </emission>
-  </animation>
+  </animation-->
 
 <animation>
     <type>material</type>
@@ -114,6 +134,7 @@
       <green> 1.0 </green>
       <blue>  1.0 </blue>
       <factor-prop>surface-positions/flap-pos-norm</factor-prop>
+
     </emission>
   </animation>
 

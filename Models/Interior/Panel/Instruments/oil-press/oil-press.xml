@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>oil-press.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
-    <object-name>fond2</object-name>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -27,8 +26,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -39,8 +38,8 @@
 
   <animation> 
     <type>rotate</type>
-    <object-name>needle</object-name>
-    <property>engines/engine/running</property>
+    <object-name>Needle</object-name>
+    <property>/engines/engine/running</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry> <!--  0 bar -->
       <entry><ind> 1 </ind><dep> 45 </dep></entry> <!-- 10 bar -->
@@ -58,4 +57,3 @@
   </animation>
 
 </PropertyList>
-

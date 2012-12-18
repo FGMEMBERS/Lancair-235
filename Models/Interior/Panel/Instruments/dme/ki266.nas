@@ -4,6 +4,9 @@
 # Maintainer: Torsten Dreyer (Torsten at t3r dot de)
 #
 # $Log$
+# Revision 1.1  2010/01/30 17:49:47  helijah
+# - new update by Victhor. Thanks to him
+#
 # Revision 1.1  2009/11/18 20:36:14  jmt
 # From Dave Perry:
 # Patch goals:

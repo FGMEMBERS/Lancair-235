@@ -213,7 +213,7 @@
     </axis> 
   </animation>
 
-  <!-- Dessous aile -->
+ <!-- Dessous aile -->
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatWing1</object-name> 
@@ -286,7 +286,7 @@
     </axis> 
   </animation>
 
-  <!-- Tableau de bord -->
+ <!-- Tableau de bord -->
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatPanel1</object-name> 
@@ -360,4 +360,3 @@
   </animation>
 
 </PropertyList>
-

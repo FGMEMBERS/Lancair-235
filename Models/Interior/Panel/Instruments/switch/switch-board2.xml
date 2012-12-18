@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>switch-board2.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>plaque2</object-name> 
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+ 
+  <!-- Smoke -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/smoke.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.024 </y-m>
+      <z-m> 0.000 </z-m>      
+    </offsets>
+  </model> 
+  
+  <!-- Landing light -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/land.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.001 </y-m>
+      <z-m> -0.003 </z-m>      
+    </offsets>
+  </model>
+  
+  <!-- nav -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/nav.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.018 </y-m>
+      <z-m> -0.006 </z-m>      
+    </offsets>
+   </model>
+
+  <!-- strobe -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/strobe.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.036 </y-m>
+      <z-m> -0.009 </z-m>      
+    </offsets>
+  </model>
+
+  <!-- beacon -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/switch/beacon.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.052 </y-m>
+      <z-m> -0.012 </z-m>      
+    </offsets>
+  </model>
+
+</PropertyList>

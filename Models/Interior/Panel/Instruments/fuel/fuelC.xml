@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>fuelC.ac</path>
 
-  <path>charge.ac</path>
-
   <animation>
-    <object-name>Face</object-name>
-    <object-name>Needle</object-name>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -27,8 +26,8 @@
 
   <animation>
     <type>material</type>
-    <object-name>Face</object-name>
-    <object-name>Needle</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
@@ -39,8 +38,8 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>Needle</object-name>
-    <property>consumables/fuel/tank[0]/level-lbs</property>
+    <object-name>needle</object-name>
+    <property>consumables/fuel/tank[1]/level-lbs</property>
     <interpolation>
       <entry><ind>   0.00 </ind><dep>  5 </dep></entry>
       <entry><ind>  54.01 </ind><dep> 25 </dep></entry> <!--  35 litres -->
@@ -61,5 +60,3 @@
   </animation>
 
 </PropertyList>
-
-
