@@ -44,14 +44,9 @@
   <model>
     <path>Aircraft/Lancair-235/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <!--
-      <x-m> -1.172 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.176 </z-m>
-       -->
-      <x-m>  0 </x-m>
-      <y-m>  0 </y-m>
-      <z-m>  0 </z-m>
+      <x-m> -1.032130 </x-m>
+      <y-m>  0.000000 </y-m>
+      <z-m>  0.163250 </z-m>
     </offsets>
   </model>
 
@@ -61,13 +56,13 @@
     <object-name>intvitres</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
-      <entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep> 0.60 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.60 </dep></entry>
     </interpolation>
     <axis>
-      <x> -1.000 </x>
-      <y>  0.000 </y>
-      <z>  0.000 </z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
