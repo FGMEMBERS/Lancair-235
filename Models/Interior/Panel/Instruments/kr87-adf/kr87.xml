@@ -4,7 +4,6 @@
      Bendix/King ADF Reciever
      Syd Adams
 -->
-
 <PropertyList>
 
   <path>kr87.ac</path>
@@ -43,6 +42,12 @@
     <object-name>vitre</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Lancair-235/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
   <animation>
     <name>in-use-leds</name>
     <object-name>freq.001</object-name>
@@ -60,18 +65,6 @@
   </animation>
 
   <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>KR87.adf</object-name>
     <object-name>KR87.bfo</object-name>
@@ -83,10 +76,10 @@
     <object-name>KR87.knob</object-name>
     <object-name>KR87.knob1</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.2 </red>
       <green> 0.1 </green>
       <blue>  0.1 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -102,10 +95,10 @@
     <object-name>et.annun</object-name>
     <object-name>stby</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -729,4 +722,3 @@
   </animation>
 
 </PropertyList>
-

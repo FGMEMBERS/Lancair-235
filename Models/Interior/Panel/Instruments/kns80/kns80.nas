@@ -3,7 +3,7 @@
 ####    Syd Adams    ####
 ####    Ron Jensen   ####
 ####
-####	Must be included in the Set file to run the KNS80 radio 
+####  Must be included in the Set file to run the KNS80 radio 
 ####
 #### Nav Modes  0 = VOR ; 1 = VOR/PAR ; 2 = RNAV/ENR ; 3 = RNAV/APR ;
 ####
@@ -174,23 +174,23 @@ var updateRNAV = func{
     var abearing = bearing > 180 ? bearing - 180 : bearing + 180;
 
     if( mode == 0){
-    #	print("KNS-80 VOR");
+    # print("KNS-80 VOR");
         needle_deflection = (NAV1_HEADING_NEEDLE_DEFLECTION.getValue());
         range = distance;
-    #	return;
+    # return;
     }
     if ( mode == 1){
-    #	print("KNS-80 VOR/PAR");
+    # print("KNS-80 VOR/PAR");
         fangle = math.abs(selected_radial - radial);
         needle_deflection = math.sin((selected_radial - radial) * D2R) * distance * 2;
     }
     if ( mode == 2){
-    #	print("KNS-80 RNAV/ENR");
+    # print("KNS-80 RNAV/ENR");
         fangle = math.abs(selected_radial - bearing);
         needle_deflection = math.sin((selected_radial - bearing) * D2R) * range * 2;
     } 
     if ( mode == 3){
-    #	print("KNS-80 RNAV/APR");
+    # print("KNS-80 RNAV/APR");
         fangle = math.abs(selected_radial - bearing);
         needle_deflection = math.sin((selected_radial - bearing) * D2R) * range * 8;
     }

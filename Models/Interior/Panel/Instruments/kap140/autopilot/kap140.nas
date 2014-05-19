@@ -256,7 +256,7 @@ var apPower = func {
     # autopilot just powered up
     print("power up");
     apInit();
-    altAlert();
+    # altAlert();                # Consol error
   } elsif (valueTest < -0.5) {
     # autopilot just lost power
     print("power lost");
@@ -270,8 +270,8 @@ var apPower = func {
 }
 
 var apButton = func {
-  ##print("apButton");
-#  Disable button if too little power
+  # print("apButton");
+  #  Disable button if too little power
   if (getprop(power) < minVoltageLimit) { return; }
 
   ##
@@ -1378,7 +1378,7 @@ heightToPressure = func(z, p0) {
 
 var altAlert = func {
   #print("alt alert");
-#  Disable button if too little power
+  # Disable button if too little power
   if (getprop(power) < minVoltageLimit) { return; }
 
   var pressureAltitude = getprop(encoder, "pressure-alt-ft");

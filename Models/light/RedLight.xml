@@ -4,17 +4,9 @@
 
   <path>RedLight.ac</path>
 
-  <animation>
-    <type>noshadow</type>
-    <object-name>Light</object-name>
-  </animation>
-
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Light</object-name>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
   </effect>
 
   <animation>
@@ -53,7 +45,10 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>controls/lighting/nav-lights</property>
+      <equals>
+        <property>controls/switches/nav-lights</property>
+        <value> 1 </value>
+      </equals>
     </condition>
   </animation>
 

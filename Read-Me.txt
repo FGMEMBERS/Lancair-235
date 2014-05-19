@@ -28,12 +28,15 @@ d : canopy
 Thanks
 ======
 
+Philippe BROCORENS for his fantastic work on the dashboard
+
 ===============
 BARANGER Emmanuel
 Janury, 15 2011.
 November, 29, 2011.
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
 
 
@@ -66,10 +69,13 @@ d : cockpit
 Remerciements
 =============
 
+Philippe BROCORENS pour son fantastique travail sur le tableau de bord
+
 ===============
 BARANGER Emmanuel
 15 Janvier 2011.
 29 Novembre 2011.
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr

@@ -30,6 +30,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
+        <!-- controls/smoke -->
         <property>sim/multiplay/generic/int[6]</property>
       </binding>
     </action>
@@ -38,6 +39,7 @@
   <animation>
     <type>rotate</type>
     <object-name>switch</object-name>
+    <!-- controls/smoke -->
     <property>sim/multiplay/generic/int[6]</property>
     <factor> 30 </factor>
     <axis>

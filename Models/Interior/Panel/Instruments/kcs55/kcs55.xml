@@ -1,5 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <PropertyList>
+  
   <ki525>
     <!-- The property where the position of the course arrow is written to -->
     <selected-course-property>instrumentation/nav[0]/radials/selected-deg</selected-course-property>
@@ -39,4 +41,5 @@
     <!-- The maximum operating voltage -->
     <input-power-max type="double">15.8</input-power-max>
   </kg102>
+  
 </PropertyList>

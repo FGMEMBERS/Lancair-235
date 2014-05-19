@@ -4,7 +4,6 @@
   Animations for the ki525 hsi indicator
   Maintainer: Torsten Dreyer
 -->
-
 <PropertyList>
 
   <path>ki525a.ac</path>
@@ -52,28 +51,22 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Lancair-235/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <property-base>sim/model/material/cockpit</property-base>
     <object-name>fond</object-name>
     <object-name>cache</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -146,8 +139,8 @@
     <factor> -8 </factor>
     <center>
       <x-m>  0.00623 </x-m>
-      <y-m>  0.03452 </y-m>
-      <z-m> -0.03065 </z-m>
+      <y-m>  0.03454 </y-m>
+      <z-m> -0.03062 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -163,8 +156,8 @@
     <factor> 8 </factor>
     <center>
       <x-m>  0.00623 </x-m>
-      <y-m>  0.03452 </y-m>
-      <z-m> -0.03065 </z-m>
+      <y-m>  0.03454 </y-m>
+      <z-m> -0.03062 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -180,8 +173,8 @@
     <factor> -8 </factor>
     <center>
       <x-m>  0.00623 </x-m>
-      <y-m> -0.03456 </y-m>
-      <z-m> -0.03065 </z-m>
+      <y-m> -0.03454 </y-m>
+      <z-m> -0.03062 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -432,9 +425,9 @@
       <entry><ind> 1.0 </ind><dep> 40 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.001838 </x-m>
-      <y-m> -0.002422 </y-m>
-      <z-m>  0.025020 </z-m>
+      <x-m> -0.00204 </x-m>
+      <y-m> -0.02422 </y-m>
+      <z-m>  0.02502 </z-m>
     </center>
     <axis>
       <x> 1 </x>
@@ -452,9 +445,9 @@
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
     </interpolation>
     <center>
-      <x-m> -0.001838 </x-m>
-      <y-m>  0.002422 </y-m>
-      <z-m>  0.025020 </z-m>
+      <x-m> -0.00202 </x-m>
+      <y-m>  0.02422 </y-m>
+      <z-m>  0.02502 </z-m>
     </center>
     <axis>
       <x> 1 </x>

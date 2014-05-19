@@ -16,22 +16,22 @@ Setting up :
 
 - Include the model in your model file.
 
-	<model> 
-		<path>Aircraft/Instruments-3d/chronograph/chronograph.xml</path>
-		<offsets> 
-			<x-m>xxx</x-m>
-			<y-m>xxx</y-m>
-			<z-m>xxx</z-m>
-		</offsets>
-	</model>
+  <model> 
+    <path>Aircraft/Instruments-3d/chronograph/chronograph.xml</path>
+    <offsets> 
+      <x-m>xxx</x-m>
+      <y-m>xxx</y-m>
+      <z-m>xxx</z-m>
+    </offsets>
+  </model>
 
 
 - Declare chronograph.nas in your foo-set.xml file. Write something like:
-	</nasal>
-		<chronograph>
-			<file>Aircraft/foo/Nasal/chronograph.nas</file>
-		</chronograph>
-	</nasal>
+  </nasal>
+    <chronograph>
+      <file>Aircraft/foo/Nasal/chronograph.nas</file>
+    </chronograph>
+  </nasal>
 
 
 - Open chronograph.nas and uncomment chrono_loop() and the following settimer()

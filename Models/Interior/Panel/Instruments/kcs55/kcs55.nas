@@ -367,7 +367,6 @@ var KI525 = {
   },
 };
 
-
 var KCS55 = {
   new : func(name = "kcs55", num = 0) {
     var obj = {};

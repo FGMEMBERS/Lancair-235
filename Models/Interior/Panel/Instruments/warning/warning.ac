@@ -7,7 +7,7 @@ name "box01"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box01
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 0.0585256
@@ -149,7 +149,7 @@ name "box02"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box02
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 0.0390424
@@ -291,7 +291,7 @@ name "box03"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box03
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 0.0195176
@@ -433,7 +433,7 @@ name "box04"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box04
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 6.16e-005
@@ -575,7 +575,7 @@ name "box05"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box05
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 -0.0192888
@@ -710,7 +710,7 @@ name "box06"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box06
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 -0.038732
@@ -852,7 +852,7 @@ name "box07"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box07
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 -0.05818
@@ -994,7 +994,7 @@ name "box08"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 5
 box08
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 20
 -0.0033096 0.00766784 -0.0776224
@@ -1136,7 +1136,7 @@ name "warning01"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning01
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 0.0593504
@@ -1183,7 +1183,7 @@ name "warning02"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning02
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 0.0398672
@@ -1230,7 +1230,7 @@ name "warning03"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning03
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 0.0203424
@@ -1277,7 +1277,7 @@ name "warning04"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning04
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 0.0008872
@@ -1324,7 +1324,7 @@ name "warning05"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning05
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 -0.018464
@@ -1371,7 +1371,7 @@ name "warning05.001"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 13
 warning05.001
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 4
 0.0033096 -0.00700672 -0.018464
@@ -1392,7 +1392,7 @@ name "warning06"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning06
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 -0.0379072
@@ -1439,7 +1439,7 @@ name "warning07"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning07
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 -0.0573552
@@ -1486,7 +1486,7 @@ name "warning08"
 loc 5.29001e-005 1.80043e-007 9.10014e-006
 data 9
 warning08
-texture "colors.png"
+texture "warning.png"
 crease 30.000000
 numvert 9
 0.0033048 0.00700928 -0.0767976

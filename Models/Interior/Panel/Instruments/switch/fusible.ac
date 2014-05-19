@@ -7,7 +7,7 @@ OBJECT poly
 name "capot"
 data 5
 capot
-texture "colors.png"
+texture "switch.png"
 texrep 1 1
 crease 30.000000
 numvert 305
@@ -2538,7 +2538,7 @@ OBJECT poly
 name "tour"
 data 4
 tour
-texture "colors.png"
+texture "switch.png"
 texrep 1 1
 crease 30.000000
 numvert 160

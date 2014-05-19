@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y"> -15 </chase-distance-m>
+  <chase-distance-m type="double" archive="y"> -10 </chase-distance-m>
 
   <view n="100">
     <name>Passanger Seat View</name>
@@ -14,8 +14,8 @@
        <x-offset-m archive="y">  0.208 </x-offset-m> <!-- Right -->
        <y-offset-m archive="y">  0.338 </y-offset-m> <!-- Up    -->
        <z-offset-m archive="y"> -0.618 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg>-10</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg> 90 </default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -28,11 +28,11 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
-      <pitch-offset-deg>-5</pitch-offset-deg>
       <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
       <y-offset-m archive="y"> 1.000 </y-offset-m> <!--Up-->
       <z-offset-m archive="y"> 2.882 </z-offset-m> <!--Back-->
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
     </config>
   </view>
 
@@ -43,7 +43,7 @@
        <y-offset-m archive="y">  0.338 </y-offset-m> <!-- Up    -->
        <z-offset-m archive="y"> -0.618 </z-offset-m> <!-- Back  -->
        <pitch-offset-deg> 0 </pitch-offset-deg>
-      <default-field-of-view-deg> 84 </default-field-of-view-deg>
+      <default-field-of-view-deg> 90 </default-field-of-view-deg>
     </config>
   </view>
 

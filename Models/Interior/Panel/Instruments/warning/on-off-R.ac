@@ -7,7 +7,7 @@ OBJECT poly
 name "on-off"
 data 6
 on-off
-texture "colors.png"
+texture "warning.png"
 texrep 1 1
 crease 30.000000
 numvert 50

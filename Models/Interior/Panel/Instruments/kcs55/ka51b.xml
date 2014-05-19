@@ -27,10 +27,10 @@
     <object-name>auto</object-name>
     <object-name>direction</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
@@ -38,18 +38,13 @@
     <type>rotate</type>
     <object-name>auto</object-name>
     <property>instrumentation/kcs55/ka51/slaved</property>
-    <factor>-60</factor>
+    <factor> -60 </factor>
     <offset-deg>60</offset-deg>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
       <z> 1 </z>
     </axis>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
   </animation>
 
   <animation>
@@ -57,24 +52,19 @@
     <object-name>direction.l</object-name>
     <object-name>direction.r</object-name>
     <property>instrumentation/kcs55/ka51/manual-slave</property>
-    <factor>30</factor>
+    <factor> 30 </factor>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
       <z> 1 </z>
     </axis>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
   </animation>
     
   <animation>
     <type>translate</type>
     <object-name>indicator</object-name>
     <property>instrumentation/kcs55/kg102/slaving-meter-norm</property>
-    <factor>0.0021579</factor>
+    <factor> 0.0021579 </factor>
     <axis>
       <x>  0 </x>
       <y> -1 </y>

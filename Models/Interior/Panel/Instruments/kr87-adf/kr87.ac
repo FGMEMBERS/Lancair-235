@@ -1,7 +1,8 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "Transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
-kids 25
+kids 26
 OBJECT poly
 name "KR87.adf"
 loc 0 0 -0
@@ -1514,4 +1515,24 @@ refs 4
 0 0.01953125 0.12109375
 1 0.01953125 0.00390625
 2 0.09375 0.00390625
+kids 0
+OBJECT poly
+name "vitre"
+loc 0 0 -0
+data 5
+vitre
+crease 30.000001
+numvert 4
+0.00382 -0.001894 0.078656
+0.00382 -0.001894 -0.027559
+0.00382 0.016035 -0.027559
+0.00382 0.016035 0.078656
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+1 1 0
+2 1 1
+3 0 1
+0 0 0
 kids 0

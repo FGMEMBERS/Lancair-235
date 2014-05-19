@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!-- KAP 140 Autopilot Configuration -->
 <!-- Each component is evaluated in the order specified.  You can make up -->
 <!-- property names to pass the result of one component on to a subsequent -->
 <!-- component. -->
 <PropertyList>
-
+  
   <filter>
     <name>heading bug error computer/normalizer</name>
     <debug>false</debug>
@@ -22,15 +23,13 @@
       <max>180</max>
     </period>
     <gain>1.0</gain>
-  </filter>
-
-
+  </filter>  
+  
   <!-- =============================================================== -->
   <!-- Roll Axis Modes                                                 -->
   <!-- =============================================================== -->
-
+  
   <!-- Nav hold (NAV) Mode-->
-
   <pid-controller>
     <name>Nav hold (NAV) Mode</name>
     <debug>false</debug>
@@ -59,7 +58,7 @@
       <u_max>45.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
+  
   <!-- Approach hold (APR) Mode-->
   <pid-controller>
     <name>Approach hold (APR) Mode</name>
@@ -89,7 +88,7 @@
       <u_max>45.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
+  
   <!-- Backcourse hold (REV) Mode-->
   <pid-controller>
     <name>Backcourse hold (REV) Mode</name>
@@ -120,9 +119,9 @@
       <u_max>45.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
+  
   <!-- Heading Select (HDG) Mode -->
-
+  
   <pid-controller>
     <name>Heading Select (HDG) Mode</name>
     <debug>false</debug>
@@ -132,7 +131,7 @@
     </enable>
     <input>
       <prop>/autopilot/internal/heading-bug-error-deg</prop>
-	<!-- <prop>/instrumentation/kcs55/ki525/heading-error-deg</prop> -->
+      <!-- <prop>/instrumentation/kcs55/ki525/heading-error-deg</prop> -->
     </input>
     <reference>
       <prop>/autopilot/KAP140/settings/target-intercept-angle</prop>
@@ -152,9 +151,9 @@
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
+  
   <!-- Wing leveler (ROL) Mode --> 
-
+  
   <pid-controller>
     <name>Wing Leveler (ROL) Mode</name>
     <debug>false</debug>
@@ -183,11 +182,11 @@
       <u_max>0.25</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
+  
   <!-- =============================================================== -->
   <!-- Pitch Axis Modes                                                -->
   <!-- =============================================================== -->
-
+  
   <!-- Altitude Hold (ALT) Mode --> 
   <pid-controller>
     <name>Altitude Hold (ALT) Mode</name>
@@ -216,9 +215,9 @@
       <u_min>-0.007</u_min> <!-- minimum output clamp -->
       <u_max>0.007</u_max>  <!-- maximum output clamp -->
     </config>
-   </pid-controller>
-
-   <!-- Glideslope Hold (GS) Mode --> 
+  </pid-controller>
+  
+  <!-- Glideslope Hold (GS) Mode --> 
   <pid-controller>
     <name>Glideslope Hold (GS) Mode</name>
     <debug>false</debug>
@@ -246,8 +245,8 @@
       <u_min>-0.001</u_min> <!-- minimum output clamp -->
       <u_max>0.017</u_max>  <!-- maximum output clamp -->
     </config>
-   </pid-controller>
-
+  </pid-controller>
+  
   <filter>
     <name>static port pressure rate computer</name>
     <debug>false</debug>
@@ -256,25 +255,25 @@
     <output>autopilot/internal/pressure-rate</output>
     <filter-time>1.0</filter-time>
   </filter>
-
-   <filter>
+  
+  <filter>
     <name>pressure-rate-filter</name>
     <debug>false</debug>
     <type>double-exponential</type>
     <input>/autopilot/internal/pressure-rate</input>
     <output>/autopilot/internal/filtered-pressure-rate</output>
     <filter-time>0.1</filter-time>
-   </filter>
-
-   <filter>
+  </filter>
+  
+  <filter>
     <name>conversion to fpm</name>
     <debug>false</debug>
     <type>gain</type>
     <input>/autopilot/KAP140/settings/target-pressure-rate</input>
     <output>/autopilot/KAP140/settings/target-pressure-rate-fpm</output>
     <gain>-58000</gain>
-   </filter>
-
+  </filter>
+  
   <!-- Vertical Speed (VS) Mode --> 
   <pid-controller>
     <name>Vertical Speed (VS) Mode</name>
@@ -293,16 +292,16 @@
       <prop>/controls/flight/elevator</prop>
     </output>
     <config>
-      <Kp>5.0</Kp>      <!-- proportional gain -->
+      <Kp>5.0</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
       <Ti>4.0</Ti>        <!-- integrator time -->
-      <Td>0.0</Td>    <!-- derivator time -->
+      <Td>0.0</Td>        <!-- derivator time -->
       <u_min>-0.5</u_min> <!-- minimum output clamp -->
       <u_max>0.5</u_max>  <!-- maximum output clamp -->
     </config>
-   </pid-controller>
-
+  </pid-controller>
+  
 </PropertyList>

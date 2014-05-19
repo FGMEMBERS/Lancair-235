@@ -58,6 +58,7 @@
   <animation>
    <type>translate</type>
    <object-name>shadow</object-name>
+   <!-- /position/gear-agl-m -->
    <property>sim/multiplay/generic/float[2]</property>
    <factor> -1 </factor>
    <axis>
@@ -68,4 +69,3 @@
  </animation>
 
 </PropertyList>
-
