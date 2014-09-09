@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
+    <object-name>cloisons</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitres2</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Lancair-235/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitres2</object-name>
+  </effect>
+  
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -0.750 </x-m>
+      <y-m> -0.250 </y-m>
+      <z-m> -0.193 </z-m>
+    </offsets>
+  </model>
+  <center>
+    <x-m> -0.820 </x-m>
+    <y-m> -1.152 </y-m>
+    <z-m> -0.757 </z-m>
+  </center>
+  
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.032130 </x-m>
+      <y-m>  0.000000 </y-m>
+      <z-m>  0.163250 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Seats -->
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.34 </x-m>
+      <y-m> -0.25 </y-m>
+      <z-m>  0.06 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.34 </x-m>
+      <y-m>  0.25 </y-m>
+      <z-m>  0.06 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Canopy -->
+  <animation>
+    <type>pick</type>
+    <object-name>intvitres</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitres</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -50 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.26885 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.28149 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Les palonniers
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -2.047 </x-m>
+      <y-m> -0.234 </y-m>
+      <z-m> -0.225 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -2.047 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.225 </z-m>
+    </offsets>
+  </model>
+  -->
+
+  <!-- Animations des manches
+  <animation>
+    <type>rotate</type>
+    <object-name>mancheG</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <center>
+      <x-m> -1.570 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.277 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mancheD</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <center>
+      <x-m> -1.570 </x-m>
+      <y-m> -0.234 </y-m>
+      <z-m> -0.277 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mancheG</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>15</factor>
+    <center>
+      <x-m> -1.570 </x-m>
+      <y-m> -0.234 </y-m>
+      <z-m> -0.277 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mancheD</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>15</factor>
+    <center>
+      <x-m> -1.570 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.277 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  -->
+
+</PropertyList>

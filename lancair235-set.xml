@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="lancair235-base.xml">
+
+  <sim>
+
+    <description>Lancair 235 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM) / Philippe BROCORENS (Panel)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">lancair235-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 3 </systems>
+      <cockpit type="int"> 2 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>

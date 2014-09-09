@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>on-off-R.ac</path>
+
+  <animation>
+    <object-name>on-off</object-name>
+    <type>rotate</type>
+    <property>/controls/electric/engine/generator</property>
+    <factor>35</factor>
+    <min-deg>0</min-deg>
+    <max-deg>35</max-deg>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <axis>
+      <x1-m>-1</x1-m>
+      <y1-m>0.0257256</y1-m>
+      <z1-m>0.0509521</z1-m>
+      <x2-m>1</x2-m>
+      <y2-m>0.0257256</y2-m>
+      <z2-m>0.0509521</z2-m>
+    </axis>
+  </animation>
+
+
+
+</PropertyList>
+
+

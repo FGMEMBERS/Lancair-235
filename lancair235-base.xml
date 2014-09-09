@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>Lancair 235 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM) / Philippe BROCORENS (Panel)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Lancair-235/lancair235-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Lancair-235/Sounds/lancair235-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Lancair-235/Models/lancair235.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.50 </setting> <!-- 15 deg -->
+      <setting> 1.00 </setting> <!-- 30 deg -->
+    </flaps>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
+        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
+        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
+        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
+        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
+        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
+        <int n="6"    type="bool" alias="controls/smoke"> 0 </int>                  <!-- 6 smoke/bomb/torpedo -->
+        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/rpm"/>
+        <float n="5"  alias="/engines/engine[0]/cranking"/>
+        <float n="6"  alias="/gear/gear[0]/wow/"/>
+        <float n="7"  alias="/gear/gear[1]/wow/"/>
+        <float n="8"  alias="/gear/gear[2]/wow/"/>
+        <float n="9"  alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/lancair235-menu.xml"/>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>200</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>100</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Copilot</name>
+      <weight-lb>200</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="3">
+      <name>Cargo</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>250</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <systems>
+      <autopilot>
+        <path>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kap140/autopilot/KAP140.xml</path>
+      </autopilot>
+    </systems>
+
+  </sim>
+
+  <input>
+    <keyboard include="Systems/lancair235-keyboard.xml"/>
+  </input>
+
+  <systems>
+    <electrical>
+      <outputs>
+        <KNS80 type="string">28</KNS80>
+        <comm type="string">28</comm>                
+        <comm n="1" type="string">28</comm>
+      </outputs>
+    </electrical>
+  </systems>
+
+  <instrumentation>  
+    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml">
+      <ka51>
+        <slaved type="bool">true</slaved>
+      </ka51>
+    </kcs55>
+    <adf>
+      <adf-btn type="bool">true</adf-btn>
+      <bfo-btn type="bool">false</bfo-btn>
+      <volume-norm type="double">0.5</volume-norm>
+      <power-btn type="bool">true</power-btn>
+      <frequencies>
+        <standby-khz type="int">291</standby-khz>
+        <selected-khz type="int">379</selected-khz>
+      </frequencies>
+    </adf>
+    <encoder>
+      <serviceable type="bool">1</serviceable>
+      <name>encoder</name>
+      <number>0</number>
+    </encoder>
+    <dme>
+      <name>dme</name>
+      <number>0</number>
+    </dme>     
+    <nav-radio>
+      <name>nav</name>
+      <number>0</number>
+    </nav-radio>
+  </instrumentation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Lancair-235/Nasal/doors.nas</file>
+    </doors>
+    <lancair235>
+      <file>Aircraft/Lancair-235/Nasal/light.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/liveries.nas</file>
+      <file>Aircraft/Lancair-235/Nasal/immat.nas</file>
+    </lancair235>
+    <chronograph>
+      <file>Aircraft/Lancair-235/Nasal/chronograph.nas</file>
+    </chronograph>
+    <kcs55>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+      <script>
+        <![CDATA[
+          KCS55.new();
+        ]]>
+      </script>
+    </kcs55>
+    <kr87>
+         <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kr87-adf/kr87.nas</file>
+    </kr87>	      
+    <ki266>
+      <file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
+      <script>
+        <![CDATA[
+          ki266.new(0);
+        ]]>
+      </script>
+    </ki266>
+    <kns80>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
+    </kns80>
+    <kap140>
+      <file>Aircraft/Lancair-235/Models/Interior/Panel/Instruments/kap140/autopilot/kap140.nas</file>
+      <!-- We can set some variables that might be
+           aircraft specific. We must do it after the file
+           to override the ones that are in the .nas file.
+           gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection";
+        -->
+      <script>
+        <![CDATA[ 
+          staticPressure = "systems/static/pressure-inhg";
+        ]]>
+      </script>
+    </kap140>
+    <zkv500>
+      <file>Aircraft/Instruments-3d/zkv500/ZKV500.nas</file>
+    </zkv500>
+  </nasal>
+   
+</PropertyList>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>on-off-R.ac</path>
+
+  <animation>
+    <object-name>on-off</object-name>
+    <type>rotate</type>
+    <property>/controls/engines/engine/master-alt</property>
+    <factor>35</factor>
+    <min-deg>0</min-deg>
+    <max-deg>35</max-deg>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+    
+  <animation>
+    <type>pick</type>
+    <object-name>on-off</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine/master-alt</property>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+
+

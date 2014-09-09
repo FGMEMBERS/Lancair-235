@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>warning.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>box01</object-name>
+    <object-name>box02</object-name>
+    <object-name>box03</object-name>
+    <object-name>box04</object-name>
+    <object-name>box05</object-name>
+    <object-name>box06</object-name>
+    <object-name>box07</object-name>
+    <object-name>box08</object-name>
+    <object-name>warning01</object-name>
+    <object-name>warning02</object-name>
+    <object-name>warning03</object-name>
+    <object-name>warning04</object-name>
+    <object-name>warning05</object-name>
+    <object-name>warning06</object-name>
+    <object-name>warning07</object-name>
+    <object-name>warning08</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- A revoir ne marche pas  
+  <animation>
+    <type>material</type>
+    <object-name>warning03</object-name>
+    <condition>
+      <and>
+        <and>
+         <less-than>
+           <property>consumables/fuel/tank[0]/level-lbs</property>
+           <value>15.43</value> >
+         </less-than>
+         <less-than>
+           <property>consumables/fuel/tank[1]/level-lbs</property>
+           <value>15.43</value> 
+         </less-than>
+        </and>
+        <less-than>
+          <property>consumables/fuel/tank[2]/level-lbs</property>
+          <value>15.43</value> 
+        </less-than>
+      </and>
+    </condition>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+<animation>
+    <type>material</type>
+    <object-name>warning05</object-name>
+    <emission>
+ 
+      <condition>
+      <less-than>
+           <factor-prop>engines/engine/mp-osi</factor-prop>
+           <value>20</value>
+     </condition>
+     <red>   1.0 </red>
+     <green> 1.0 </green>
+     <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+<animation>
+    <type>material</type>
+    <object-name>warning01</object-name>
+   
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+   <factor-prop>/controls/engines/engine/cutoff</factor-prop>
+    
+    </emission>
+  </animation>
+-->
+
+<!-- Alarmes fuel réserve 10l 1 litre= 0.264172052 gallons-->
+  <animation>
+    <type>material</type>
+    <object-name>warning03</object-name>
+    <condition>
+      <and>
+         <less-than>
+           <property>consumables/fuel/tank[0]/level-gal_us</property>
+           <value>2.64172052</value> <!-- 10 litres -->
+         </less-than>
+      </and>
+    </condition>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+<!--animation>
+    <type>material</type>
+    <object-name>warning03</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+      <factor-prop>/engines/engine/out-of-fuel</factor-prop>
+    </emission>
+  </animation-->
+
+<animation>
+    <type>material</type>
+    <object-name>warning07</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+      <factor-prop>gear/gear/position-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>warning06</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+      <factor-prop>surface-positions/flap-pos-norm</factor-prop>
+
+    </emission>
+  </animation>
+
+</PropertyList>
+
+
